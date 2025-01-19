@@ -25,3 +25,25 @@ function showNextSlide() {
 }
 
 setInterval(showNextSlide, 3000);
+
+// Suporte para toque nas caixas do portfólio
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+portfolioItems.forEach(item => {
+    if (isTouchDevice) {
+        // Para dispositivos de toque
+        item.addEventListener('click', () => {
+            portfolioItems.forEach(el => el.classList.remove('touch-active')); // Remove outras classes ativas
+            item.classList.toggle('touch-active'); // Ativa a imagem da caixa tocada
+        });
+    } else {
+        // Para dispositivos sem toque (desktop)
+        item.addEventListener('mouseover', () => {
+            item.classList.add('show-image'); // Mostra a imagem no hover
+        });
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('show-image'); // Oculta a imagem ao sair do hover
+        });
+    }
+});

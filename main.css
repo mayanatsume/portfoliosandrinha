@@ -5,6 +5,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+
 #menu {
     padding-top: 0px; /* Espaçamento interno no topo */
     background: white; /* Cor de fundo */
@@ -19,6 +20,13 @@ body, html {
     width: 215px;
     height: 115px;
 }
+
+@media (max-width: 768px) {
+    /* Ajustar o vídeo para preencher a tela */
+    .video-background {
+        width: 100%;
+        height: auto;
+    }
 
 /* Navegação Geral */
 .nav-links {
@@ -169,7 +177,7 @@ body, html {
 /* Grade de Caixinhas */
 #portfolio .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 caixas por linha */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta o número de colunas automaticamente */
     gap: 20px; /* Espaçamento entre as caixas */
     justify-content: center; /* Centraliza as caixas horizontalmente */
     position: relative; /* Permite o uso de `left` */
@@ -177,10 +185,10 @@ body, html {
     transition: left 0.5s ease; /* Suaviza movimentação horizontal */
 }
 
-
 /* Tamanho Geral das Caixinhas */
 .portfolio-item {
-    width: 450px; /* Largura da caixa */
+    width: 100%; /* Ocupa 100% do espaço disponível */
+    max-width: 450px; /* Limite máximo de largura */
     height: 300px; /* Altura da caixa */
     position: relative;
     background-color: #ddd; /* Cor inicial */
@@ -196,9 +204,10 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Pinyon Script', cursive; /* Fonte elegante */
-    font-size: 3rem; /* Tamanho do texto */
+    font-size: 2.5rem; /* Tamanho ajustado para telas menores */
     color: black; /* Cor do texto */
     z-index: 2; /* Mantém o texto acima da imagem */
+    text-align: center;
 }
 
 /* Imagem Oculta Inicialmente */
@@ -258,10 +267,33 @@ body, html {
 .portfolio-item.guarda-roupa::before {
     background-image: url('images/guarda-roupa.jpg'); /* Imagem para Guarda-Roupa */
 }
-/* Efeito ao Passar o Mouse ou Tocar */
+
+/* Efeito ao Passar o Mouse */
 .portfolio-item:hover::before,
 .portfolio-item:focus::before {
     opacity: 1; /* Torna a imagem visível */
+}
+
+/* Efeito ao Tocar no Celular */
+.portfolio-item.touch-active::before {
+    opacity: 1; /* Torna a imagem visível */
+}
+
+/* Ajustes para Telas Pequenas */
+@media (max-width: 768px) {
+    #portfolio h2 {
+        font-size: 3rem; /* Reduz o tamanho do título */
+    }
+
+    .portfolio-item {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        height: auto; /* Ajusta automaticamente para imagens */
+        margin: 10px auto; /* Centraliza as caixas */
+    }
+
+    .portfolio-item span {
+        font-size: 2rem; /* Reduz o texto */
+    }
 }
 
 /* Slider */
@@ -341,4 +373,5 @@ body, html {
     font-size: 1.2rem;
     max-width: 800px;
 }
+
 
