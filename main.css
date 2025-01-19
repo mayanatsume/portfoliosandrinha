@@ -6,9 +6,12 @@ body, html {
 }
 
 
-#menu {
-    padding-top: 0px; /* Espaçamento interno no topo */
-    background: white; /* Cor de fundo */
+/* Centraliza o contêiner principal */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limite para desktops */
+    margin: 0 auto;
+    padding: 0 15px; /* Espaçamento lateral */
 }
 
 .logo {
@@ -28,22 +31,18 @@ body, html {
 
     .nav-links {
         flex-direction: column; /* Links em coluna */
-        text-align: center; /* Centraliza os links */
         width: 100%; /* Ocupa toda a largura */
+        gap: 15px;
     }
 
-    .portfolio-item {
-        width: 90%; /* Quase toda a largura */
-        margin: 10px auto; /* Centraliza */
-    }
-
-    #portfolio .portfolio-grid {
-        grid-template-columns: 1fr; /* Uma caixa por linha */
+    /* Contatos */
+    .contacts {
+        gap: 15px;
     }
 
     .contacts img {
         width: 30px; /* Ícones menores */
-        height: auto;
+        height: 30px;
     }
 }
 
@@ -214,19 +213,19 @@ body, html {
 /* Grade de Caixinhas */
 #portfolio .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta o número de colunas automaticamente */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas por linha */
     gap: 20px; /* Espaçamento entre as caixas */
     justify-content: center; /* Centraliza as caixas horizontalmente */
     position: relative; /* Permite o uso de `left` */
-    left: 50px; /* Ajuste inicial */
+    left: 10px; /* Ajuste inicial */
     transition: left 0.5s ease; /* Suaviza movimentação horizontal */
 }
 
 /* Tamanho Geral das Caixinhas */
 .portfolio-item {
-    width: 100%; /* Ocupa 100% do espaço disponível */
-    max-width: 450px; /* Limite máximo de largura */
-    height: 300px; /* Altura da caixa */
+    width: 85%; /* Ocupa 100% do espaço disponível */
+    max-width: 550px; /* Limite máximo de largura */
+    height: 350px; /* Altura da caixa */
     margin: 0 auto; /* Centraliza horizontalmente */
     position: relative;
     background-color: #ddd; /* Cor inicial */
