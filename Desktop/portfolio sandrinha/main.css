@@ -1,0 +1,344 @@
+/* Reset Básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    padding-top: 0px; /* Espaçamento interno no topo */
+    background: white; /* Cor de fundo */
+}
+
+.logo {
+    position: relative; /* Remove posição absoluta */
+    margin-left: 60px;
+}
+
+.logo img {
+    width: 215px;
+    height: 115px;
+}
+
+/* Navegação Geral */
+.nav-links {
+    position: absolute; /* Permite posicionamento livre */
+    top: 90px; /* Controle de posição vertical */
+    left: 85%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centralização */
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+    width: auto;
+    height: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    transition: color 0.3s;
+    font-weight: bold; /* Adiciona negrito */
+    transition: color 0.3s; /* Suaviza a mudança de cor */
+}
+
+.nav-links a:hover {
+    color: red; /* Cor ao passar o mouse */
+}
+
+/* Controle Individual para Links */
+.nav-links a:nth-child(1) { /* Sobre */
+    top: auto;
+    left: auto;
+}
+
+.nav-links a:nth-child(2) { /* Serviços */
+    top: auto;
+    left: auto;
+}
+
+.nav-links a:nth-child(3) { /* Portfólio */
+    top: auto;
+    left: auto;
+}
+
+.nav-links a:nth-child(4) { /* Investir */
+    top: auto;
+    left: auto;
+}
+
+/* Botões de Contato */
+.contacts a img {
+    border: none; /* Remove bordas */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.phone-btn {
+    position: absolute;
+    top: 5px;
+    left: 250px;
+}
+
+.phone-btn img {
+    width: 180px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+}
+
+.email-btn {
+    position: absolute;
+    top: 45px;
+    left: 244px;
+}
+
+.email-btn img {
+    width: 390px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+}
+
+.instagram-btn {
+    position: absolute;
+    top: 80px;
+    left: 248px;
+}
+
+.instagram-btn img {
+    width: 265px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+}
+
+.contacts a img:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+}
+
+/* Seção Hero */
+#inicio {
+    height: 780px; /* Altura fixa em pixels */
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Frase de Impacto */
+#impacto {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.impact-text {
+    font-family:'Times New Roman', cursive;
+    font-size: 1.8rem;
+    color: #333;
+    font-style: italic;
+}
+
+/* Seção Sobre */
+#sobre {
+    height: 100vh;
+    background: url('images/sobre-background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+/* Título do Portfólio */
+#portfolio h2 {
+    font-family: 'Pinyon Script', cursive; /* Fonte elegante */
+    font-size: 4rem; /* Tamanho ajustado */
+    text-align: center; /* Centraliza horizontalmente */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: black; /* Ajuste a cor, se necessário */
+}
+
+/* Grade de Caixinhas */
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 caixas por linha */
+    gap: 20px; /* Espaçamento entre as caixas */
+    justify-content: center; /* Centraliza as caixas horizontalmente */
+    position: relative; /* Permite o uso de `left` */
+    left: 50px; /* Ajuste inicial */
+    transition: left 0.5s ease; /* Suaviza movimentação horizontal */
+}
+
+
+/* Tamanho Geral das Caixinhas */
+.portfolio-item {
+    width: 450px; /* Largura da caixa */
+    height: 300px; /* Altura da caixa */
+    position: relative;
+    background-color: #ddd; /* Cor inicial */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Transição para a cor */
+}
+
+/* Texto da Caixa */
+.portfolio-item span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Pinyon Script', cursive; /* Fonte elegante */
+    font-size: 3rem; /* Tamanho do texto */
+    color: black; /* Cor do texto */
+    z-index: 2; /* Mantém o texto acima da imagem */
+}
+
+/* Imagem Oculta Inicialmente */
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    opacity: 0; /* Torna a imagem invisível inicialmente */
+    transition: opacity 0.5s ease; /* Suaviza a transição da imagem */
+    z-index: 1; /* Mantém a imagem abaixo do texto */
+}
+
+/* Cores e Imagens Específicas */
+.portfolio-item.despensa {
+    background-color: #a57474; /* Cor inicial Bordô */
+}
+.portfolio-item.despensa::before {
+    background-image: url('images/despensa.jpg'); /* Imagem para Despensa */
+}
+
+.portfolio-item.quarto {
+    background-color: #6f8070; /* Cor inicial Verde */
+}
+.portfolio-item.quarto::before {
+    background-image: url('images/quarto.jpg'); /* Imagem para Quarto */
+}
+
+.portfolio-item.banheiro {
+    background-color: #a78686; /* Cor inicial Cinza */
+}
+.portfolio-item.banheiro::before {
+    background-image: url('images/banheiro.jpg'); /* Imagem para Banheiro */
+}
+
+.portfolio-item.cozinha {
+    background-color: #d6cda8; /* Cor inicial Amarelo */
+}
+.portfolio-item.cozinha::before {
+    background-image: url('images/cozinha.jpg'); /* Imagem para Cozinha */
+}
+
+.portfolio-item.sala {
+    background-color: #81b8d5; /* Cor inicial Azul Claro */
+}
+.portfolio-item.sala::before {
+    background-image: url('images/sala.jpg'); /* Imagem para Sala */
+}
+
+.portfolio-item.guarda-roupa {
+    background-color: #bf90cb; /* Cor inicial Roxo */
+}
+.portfolio-item.guarda-roupa::before {
+    background-image: url('images/guarda-roupa.jpg'); /* Imagem para Guarda-Roupa */
+}
+/* Efeito ao Passar o Mouse ou Tocar */
+.portfolio-item:hover::before,
+.portfolio-item:focus::before {
+    opacity: 1; /* Torna a imagem visível */
+}
+
+/* Slider */
+/* Container do Slider */
+.slider {
+    width: 55%; /* Largura do slider */
+    height: 750px; /* Altura do slider (ajuste conforme necessário) */
+    overflow: hidden; /* Esconde imagens fora do container */
+    position: relative;
+    margin: 30px auto; /* Centraliza o slider */
+}
+
+/* Conteúdo do Slider */
+.slider-content {
+    display: flex; /* Cria o layout horizontal */
+    transition: transform 0.5s ease-in-out; /* Suaviza a transição entre imagens */
+}
+
+/* Imagens do Slider */
+.slider-content img {
+    width: 100%; /* Ocupa a largura total do slider */
+    height: auto; /* Mantém a proporção da imagem */
+    flex-shrink: 0; /* Garante que cada imagem ocupe uma posição fixa */
+    max-height: 600px; /* Limita a altura máxima */
+}
+
+.slider h3 {
+    font-family: 'Pinyon Script', cursive; /* Fonte elegante */
+    font-size: 3.5rem; /* Ajuste o tamanho do texto */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto */
+    color: black; /* Ajuste a cor */
+}
+
+/* Seção Serviços */
+#servicos {
+    height: 100vh; /* Mesmo tamanho que as outras seções */
+    background: url('images/servicos-background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#servicos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#servicos p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+/* Seção Investimento e Agenda */
+#investir {
+    height: 90vh; /* Mesmo tamanho que as outras seções */
+    background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#investir h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#investir p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+

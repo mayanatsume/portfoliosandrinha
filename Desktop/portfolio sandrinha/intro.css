@@ -1,0 +1,47 @@
+/* Reset Básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Container da introdução */
+#introSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Mantém a introdução acima da página principal */
+    background: #000; /* Fundo preto para a introdução */
+}
+
+/* Vídeo em tela cheia */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo preencha toda a tela */
+    z-index: 1;
+}
+
+/* Transição */
+.hidden {
+    animation: fadeOut 1s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+
