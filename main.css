@@ -22,12 +22,49 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    /* Ajustar o vídeo para preencher a tela */
-    .video-background {
-        width: 100%;
+    body {
+        padding: 10px; /* Adiciona espaçamento interno */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Links em coluna */
+        text-align: center; /* Centraliza os links */
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    .portfolio-item {
+        width: 90%; /* Quase toda a largura */
+        margin: 10px auto; /* Centraliza */
+    }
+
+    #portfolio .portfolio-grid {
+        grid-template-columns: 1fr; /* Uma caixa por linha */
+    }
+
+    .contacts img {
+        width: 30px; /* Ícones menores */
         height: auto;
     }
 }
+
+/* Vídeo responsivo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    object-fit: cover; /* Garante que o vídeo se ajuste ao container */
+    z-index: -1;
+}
+
+/* Para telas menores */
+@media (max-width: 768px) {
+    .video-background {
+        object-fit: contain; /* Ajusta para caber sem cortar */
+    }
+}
+
 /* Navegação Geral */
 .nav-links {
     position: absolute; /* Permite posicionamento livre */
@@ -190,6 +227,7 @@ body, html {
     width: 100%; /* Ocupa 100% do espaço disponível */
     max-width: 450px; /* Limite máximo de largura */
     height: 300px; /* Altura da caixa */
+    margin: 0 auto; /* Centraliza horizontalmente */
     position: relative;
     background-color: #ddd; /* Cor inicial */
     overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
