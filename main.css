@@ -1,10 +1,11 @@
-/* Reset Básico */
-body, html {
+body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    width: 100%; /* Garante que o corpo ocupe a largura total */
+    overflow-x: hidden; /* Remove rolagem horizontal */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    box-sizing: border-box;
 }
-
 
 /* Centraliza o contêiner principal */
 .container {
@@ -208,6 +209,16 @@ body, html {
 #sobre p {
     font-size: 1.2rem;
     max-width: 800px;
+}
+
+.banner {
+    width: 100%;
+    height: auto; /* Ajusta automaticamente a altura */
+    display: flex; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-size: cover; /* Preenche o espaço proporcionalmente */
+    background-position: center;
 }
 
 /* Título do Portfólio */
