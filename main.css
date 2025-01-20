@@ -113,6 +113,7 @@ body {
 
     /* SEÇÃO HERO */
     #inicio {
+        width: 100%;
         height: 780px; /* Mantido o valor fixo */
         background: url('images/hero.jpg') no-repeat center center/cover;
         display: flex;
