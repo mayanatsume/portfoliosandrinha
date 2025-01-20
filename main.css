@@ -14,6 +14,43 @@ body, html {
     padding: 0 15px; /* Espaçamento lateral */
 }
 
+/* Adaptação para dispositivos pequenos (celulares, largura menor que 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Texto menor */
+        padding: 10px; /* Espaçamento interno */
+    }
+
+    .container {
+        width: 100%; /* Ajusta para ocupar toda a largura */
+        padding: 5px; /* Reduz o espaçamento interno */
+    }
+
+    /* Ajuste de elementos específicos (exemplo para o portfólio) */
+    .portfolio-item {
+        width: 90%; /* Caixinhas mais largas no celular */
+        height: auto; /* Ajusta automaticamente a altura */
+        margin: 10px auto; /* Centraliza no celular */
+    }
+}
+
+/* Adaptação para tablets (entre 481px e 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Texto médio */
+        padding: 20px;
+    }
+
+    .container {
+        padding: 10px; /* Ajusta o espaçamento */
+    }
+
+    .portfolio-item {
+        width: 45%; /* Duas colunas no tablet */
+        margin: 10px;
+    }
+}
+
 .logo {
     position: relative; /* Remove posição absoluta */
     margin-left: 60px;
@@ -22,28 +59,6 @@ body, html {
 .logo img {
     width: 215px;
     height: 115px;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding: 10px; /* Adiciona espaçamento interno */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Links em coluna */
-        width: 100%; /* Ocupa toda a largura */
-        gap: 15px;
-    }
-
-    /* Contatos */
-    .contacts {
-        gap: 15px;
-    }
-
-    .contacts img {
-        width: 30px; /* Ícones menores */
-        height: 30px;
-    }
 }
 
 /* Vídeo responsivo */
@@ -57,12 +72,6 @@ body, html {
     z-index: -1;
 }
 
-/* Para telas menores */
-@media (max-width: 768px) {
-    .video-background {
-        object-fit: contain; /* Ajusta para caber sem cortar */
-    }
-}
 
 /* Navegação Geral */
 .nav-links {
