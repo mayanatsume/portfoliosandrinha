@@ -1,34 +1,107 @@
-/* =============================
-   RESET / BASE GERAL
-   ============================= */
-   * {
+/* Reset Básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Remove rolagem horizontal */
+    width: 1200px; /* Aqui você ajusta conforme seu layout de desktop */
+    margin: 0 auto; /* Se quiser centralizar em telas maiores ainda */
+    overflow-x: auto; /* Se algo ultrapassar 1200px, rolagem horizontal */
     font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
 
+/* Container (se quiser, mas não é estritamente necessário, pois o body já tem 1200px) */
 .container {
     width: 100%;
-    max-width: 1200px; /* Limite para desktops */
+    max-width: 1200px; 
     margin: 0 auto;
-    padding: 0 15px; /* Espaçamento lateral */
+    padding: 0 15px;
 }
 
-/* =============================
-   ESTILOS GERAIS (válidos para qualquer tela)
-   Aqui ficam coisas que não dependem de tamanho de tela
-   ============================= */
+/* Menu e Logo */
+.logo {
+    position: relative; 
+    margin-left: 10px;
+}
 
-/* Seção Impacto */
+.logo img {
+    width: 215px;
+    height: 115px;
+}
+
+/* Contatos (Botões) */
+.phone-btn {
+    position: absolute;
+    top: 5px;
+    left: 250px;
+}
+.phone-btn img {
+    width: 180px;
+    height: 50px;
+}
+
+.email-btn {
+    position: absolute;
+    top: 45px;
+    left: 244px;
+}
+.email-btn img {
+    width: 390px;
+    height: 40px;
+}
+
+.instagram-btn {
+    position: absolute;
+    top: 80px;
+    left: 248px;
+}
+.instagram-btn img {
+    width: 265px;
+    height: 40px;
+}
+
+.contacts a img:hover {
+    transform: scale(1.1);
+}
+
+/* Nav Links */
+.nav-links {
+    position: absolute; 
+    top: 90px;
+    left: 95%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    width: auto;
+    height: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+/* Seção Hero */
+#inicio {
+    height: 780px; 
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Frase de Impacto */
 #impacto {
     text-align: center;
     padding: 20px;
@@ -42,32 +115,51 @@ body {
     font-style: italic;
 }
 
-/* Título do Portfólio */
-#portfolio h2 {
-    font-family: 'Pinyon Script', cursive; /* Fonte elegante */
-    font-size: 4rem; 
-    text-align: center; 
-    margin-bottom: 20px; 
-    color: black; 
+/* Seção Sobre */
+#sobre {
+    height: 100vh;
+    background: url('images/sobre-background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+#sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+#sobre p {
+    font-size: 1.2rem;
+    max-width: 800px;
 }
 
-/* Grade de Caixinhas do Portfólio */
-#portfolio .portfolio-grid {
+/* Portfólio */
+#portfolio h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: center; 
-    position: relative; 
-    left: 10px; 
+    justify-content: center;
+    position: relative;
+    left: 10px;
     transition: left 0.5s ease;
 }
 
-/* Caixinhas do Portfólio */
 .portfolio-item {
-    width: 85%; 
-    max-width: 550px; 
-    height: 350px; 
-    margin: 0 auto; 
+    width: 85%;
+    max-width: 550px;
+    height: 350px;
+    margin: 0 auto;
     position: relative;
     background-color: #ddd;
     overflow: hidden;
@@ -80,14 +172,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Pinyon Script', cursive; /* Fonte elegante */
-    font-size: 2.5rem; 
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2.5rem;
     color: black;
-    z-index: 2; 
+    z-index: 2;
     text-align: center;
 }
 
-/* Imagem Oculta Inicialmente */
 .portfolio-item::before {
     content: '';
     position: absolute;
@@ -95,116 +186,69 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
-    opacity: 0; 
-    transition: opacity 0.5s ease; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
     z-index: 1;
 }
 
-/* Cores e Imagens Específicas */
-.portfolio-item.despensa {
-    background-color: #a57474; 
-}
-.portfolio-item.despensa::before {
-    background-image: url('images/despensa.jpg'); 
-}
+/* Exemplos de cores e imagens */
+.portfolio-item.despensa { background-color: #a57474; }
+.portfolio-item.despensa::before { background-image: url('images/despensa.jpg'); }
 
-.portfolio-item.quarto {
-    background-color: #6f8070; 
-}
-.portfolio-item.quarto::before {
-    background-image: url('images/quarto.jpg'); 
-}
+.portfolio-item.quarto { background-color: #6f8070; }
+.portfolio-item.quarto::before { background-image: url('images/quarto.jpg'); }
 
-.portfolio-item.banheiro {
-    background-color: #a78686; 
-}
-.portfolio-item.banheiro::before {
-    background-image: url('images/banheiro.jpg'); 
-}
+.portfolio-item.banheiro { background-color: #a78686; }
+.portfolio-item.banheiro::before { background-image: url('images/banheiro.jpg'); }
 
-.portfolio-item.cozinha {
-    background-color: #d6cda8; 
-}
-.portfolio-item.cozinha::before {
-    background-image: url('images/cozinha.jpg'); 
-}
+.portfolio-item.cozinha { background-color: #d6cda8; }
+.portfolio-item.cozinha::before { background-image: url('images/cozinha.jpg'); }
 
-.portfolio-item.sala {
-    background-color: #81b8d5; 
-}
-.portfolio-item.sala::before {
-    background-image: url('images/sala.jpg'); 
-}
+.portfolio-item.sala { background-color: #81b8d5; }
+.portfolio-item.sala::before { background-image: url('images/sala.jpg'); }
 
-.portfolio-item.guarda-roupa {
-    background-color: #bf90cb; 
-}
-.portfolio-item.guarda-roupa::before {
-    background-image: url('images/guarda-roupa.jpg'); 
-}
+.portfolio-item.guarda-roupa { background-color: #bf90cb; }
+.portfolio-item.guarda-roupa::before { background-image: url('images/guarda-roupa.jpg'); }
 
-/* Efeito hover */
 .portfolio-item:hover::before,
 .portfolio-item:focus::before {
     opacity: 1;
 }
 
-/* Slider (Antes & Depois) */
+/* Slider */
 .slider {
-    width: 55%; 
-    height: 750px; 
-    overflow: hidden; 
-    position: relative; 
+    width: 55%;
+    height: 750px;
+    overflow: hidden;
+    position: relative;
     margin: 30px auto;
 }
 
 .slider-content {
-    display: flex; 
-    transition: transform 0.5s ease-in-out; 
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider-content img {
-    width: 100%; 
+    width: 100%;
     height: auto;
     flex-shrink: 0;
-    max-height: 600px; 
+    max-height: 600px;
 }
 
 .slider h3 {
     font-family: 'Pinyon Script', cursive;
     font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 20px; 
-    color: black; 
-}
-
-/* Seções com imagens de fundo */
-#sobre {
-    height: 100vh;
-    background: url('images/sobre-background.jpg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-#sobre h2 {
-    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: black;
 }
 
-#sobre p {
-    font-size: 1.2rem;
-    max-width: 800px;
-}
-
+/* Seção Serviços */
 #servicos {
-    height: 100vh; 
+    height: 100vh;
     background: url('images/servicos-background.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -225,8 +269,9 @@ body {
     max-width: 800px;
 }
 
+/* Seção Investir */
 #investir {
-    height: 90vh; 
+    height: 90vh;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -247,205 +292,3 @@ body {
     max-width: 800px;
 }
 
-/* =============================
-   ====== LAYOUT DESKTOP =======
-   (telas >= 769px, mantemos seu layout fixo)
-   ============================= */
-@media (min-width: 769px) {
-    /* Menu Superior (Header) */
-    header#menu {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    .logo {
-        position: relative; 
-        margin-left: 10px;
-    }
-
-    .logo img {
-        width: 215px;
-        height: 115px;
-    }
-
-    /* Nav Links */
-    .nav-links {
-        position: absolute;
-        top: 90px;
-        left: 95%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 20px;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.6rem;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
-    .nav-links a:hover {
-        color: red;
-    }
-
-    /* Ícones de Contato */
-    .contacts {
-        position: relative; /* container para os botões absolutos */
-    }
-
-    .phone-btn {
-        position: absolute;
-        top: 5px;
-        left: 250px;
-    }
-    .phone-btn img {
-        width: 180px;
-        height: 50px;
-    }
-
-    .email-btn {
-        position: absolute;
-        top: 45px;
-        left: 244px;
-    }
-    .email-btn img {
-        width: 390px;
-        height: 40px;
-    }
-
-    .instagram-btn {
-        position: absolute;
-        top: 80px;
-        left: 248px;
-    }
-    .instagram-btn img {
-        width: 265px;
-        height: 40px;
-    }
-
-    .contacts a img:hover {
-        transform: scale(1.1);
-    }
-
-    /* Seção Hero (Inicio) */
-    #inicio {
-        height: 780px; /* valor fixo como no seu código */
-        background: url('images/hero.jpg') no-repeat center center/cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Slider (mantemos o layout fixo) */
-    .slider {
-        width: 55%;
-        height: 750px;
-        margin: 30px auto;
-    }
-}
-
-/* =============================
-   ====== LAYOUT MOBILE ========
-   (telas <= 768px, layout responsivo)
-   ============================= */
-@media (max-width: 768px) {
-
-    /* HEADER RESTRUTURADO NO CELULAR */
-    header#menu {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        position: relative; 
-    }
-
-    .logo {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-        position: static; /* remove absolute */
-    }
-    .logo img {
-        width: 180px; /* Ajuste se quiser menor ou maior */
-        height: auto;
-    }
-
-    .contacts {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 10px;
-        position: static; /* remove absolute */
-    }
-    /* Remove as posições fixas dos botões */
-    .phone-btn,
-    .email-btn,
-    .instagram-btn {
-        position: static;
-        top: auto;
-        left: auto;
-    }
-    /* Ajusta o tamanho dos ícones de contato */
-    .contacts a img {
-        width: 120px;  /* Ajuste conforme for apropriado */
-        height: auto;
-    }
-
-    /* Nav Links no mobile */
-    .nav-links {
-        position: static;
-        left: auto;
-        transform: none;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .nav-links a {
-        font-size: 1.4rem; /* um pouco menor no celular */
-    }
-
-    /* Seção Hero no mobile */
-    #inicio {
-        width: 100%;
-        min-height: 400px; /* para não ficar tão pequeno */
-        background: url('images/hero.jpg') no-repeat center center/cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px; /* afasta das bordas */
-    }
-
-    /* Slider no mobile */
-    .slider {
-        width: 90%;
-        height: auto;
-        margin: 20px auto;
-    }
-    .slider-content img {
-        max-height: none;
-        width: 100%;
-        height: auto;
-    }
-
-    /* Ajustes gerais para as caixinhas do Portfólio */
-    #portfolio .portfolio-grid {
-        grid-template-columns: 1fr; /* 1 coluna no mobile, se quiser */
-        left: 0; /* remove offset */
-    }
-    .portfolio-item {
-        width: 90%;
-        max-width: 100%;
-        height: auto;
-        margin: 10px auto;
-    }
-    .portfolio-item span {
-        font-size: 2rem; 
-    }
-}
