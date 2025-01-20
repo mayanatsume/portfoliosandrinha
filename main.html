@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta tag de viewport ajustada para responsividade -->
+    <!-- Meta tag de viewport para responsividade -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -16,6 +16,12 @@
             <div class="logo">
                 <img src="images/logo.png" alt="Logo" id="logoImg">
             </div>
+            <nav class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#investir">Investir</a>
+            </nav>
             <div class="contacts">
                 <a href="tel:+351919736324" class="contact-btn">
                     <img src="images/phone-icon.png" alt="Telefone">
@@ -27,22 +33,17 @@
                     <img src="images/instagram-icon.png" alt="Instagram">
                 </a>
             </div>
-            <nav class="nav-links">
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#investir">Investir</a>
-            </nav>
         </header>
 
         <!-- Seção Hero com Vídeo de Introdução -->
         <section id="inicio" class="section">
             <video class="video-background" autoplay muted loop playsinline>
                 <source src="videos/intro.mp4" type="video/mp4">
+                <!-- Fallback para navegadores que não suportam o elemento de vídeo -->
+                <img src="images/fallback.jpg" alt="Imagem de fallback">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
             <div class="hero-content">
-                <!-- Conteúdo opcional sobre o vídeo -->
                 <h1>Bem-vindo ao Meu Portfólio</h1>
             </div>
         </section>

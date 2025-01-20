@@ -1,127 +1,196 @@
-/* Reset Básico */
-* {
+/* =============================
+   RESET / BASE GERAL
+   ============================= */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Remove rolagem horizontal */
-}
-
-/* Container Principal */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Menu Superior */
-#menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    background-color: #333;
-}
-
-.logo img {
-    width: 150px;
-    height: auto;
-}
-
-.contacts {
-    display: flex;
-    gap: 10px;
-}
-
-.contact-btn img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.contact-btn:hover {
-    transform: scale(1.1);
-}
-
-/* Navegação */
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: red;
-}
-
-/* Seções */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* Seção Hero com Vídeo */
-#inicio {
-    position: relative;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden; /* Remove rolagem horizontal */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-.video-background {
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limite para desktops */
+    margin: 0 auto;
+    padding: 0 15px; /* Espaçamento lateral */
+}
+
+/* =============================
+   ESTILOS GERAIS (válidos para qualquer tela)
+   Aqui ficam coisas que não dependem de tamanho de tela
+   ============================= */
+
+/* Seção Impacto */
+#impacto {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.impact-text {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.8rem;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 10px; /* Ajuste para espaçamento */
+}
+
+/* Título do Portfólio */
+#portfolio h2 {
+    font-family: 'Pinyon Script', cursive; /* Fonte elegante */
+    font-size: 4rem; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: black; 
+}
+
+/* Grade de Caixinhas do Portfólio */
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste para responsividade */
+    gap: 20px;
+    justify-content: center; 
+    /* Removido position: relative; e left: 10px; para centralizar */
+    transition: left 0.5s ease;
+}
+
+/* Caixinhas do Portfólio */
+.portfolio-item {
+    width: 100%; /* Ajuste para ocupar toda a largura da coluna */
+    max-width: 550px; 
+    height: 350px; 
+    margin: 0 auto; 
+    position: relative;
+    background-color: #ddd;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.portfolio-item span {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    font-family: 'Pinyon Script', cursive; /* Fonte elegante */
+    font-size: 2.5rem; 
+    color: black;
+    z-index: 2; 
+    text-align: center;
 }
 
-.hero-content {
-    position: relative;
+/* Imagem Oculta Inicialmente */
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
     z-index: 1;
-    color: #fff;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+/* Cores e Imagens Específicas */
+.portfolio-item.despensa {
+    background-color: #a57474; 
+}
+.portfolio-item.despensa::before {
+    background-image: url('images/despensa.jpg'); 
 }
 
-/* Frase de Impacto */
-#impacto .impact-text {
-    font-family: 'Times New Roman', serif;
-    font-size: 1.5rem;
-    color: #333;
-    font-style: italic;
-    margin-bottom: 20px;
+.portfolio-item.quarto {
+    background-color: #6f8070; 
+}
+.portfolio-item.quarto::before {
+    background-image: url('images/quarto.jpg'); 
 }
 
-/* Seção Sobre */
+.portfolio-item.banheiro {
+    background-color: #a78686; 
+}
+.portfolio-item.banheiro::before {
+    background-image: url('images/banheiro.jpg'); 
+}
+
+.portfolio-item.cozinha {
+    background-color: #d6cda8; 
+}
+.portfolio-item.cozinha::before {
+    background-image: url('images/cozinha.jpg'); 
+}
+
+.portfolio-item.sala {
+    background-color: #81b8d5; 
+}
+.portfolio-item.sala::before {
+    background-image: url('images/sala.jpg'); 
+}
+
+.portfolio-item.guarda-roupa {
+    background-color: #bf90cb; 
+}
+.portfolio-item.guarda-roupa::before {
+    background-image: url('images/guarda-roupa.jpg'); 
+}
+
+/* Efeito hover */
+.portfolio-item:hover::before,
+.portfolio-item:focus::before {
+    opacity: 1;
+}
+
+/* Slider (Antes & Depois) */
+.slider {
+    width: 100%; /* Ajustado para ocupar toda a largura */
+    max-width: 800px; /* Limite máximo para desktops */
+    height: auto; /* Ajuste de altura para responsividade */
+    overflow: hidden; 
+    position: relative; 
+    margin: 30px auto;
+}
+
+.slider-content {
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.slider-content img {
+    width: 100%; 
+    height: auto;
+    flex-shrink: 0;
+    max-height: 600px; 
+}
+
+.slider h3 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 20px; 
+    color: black; 
+}
+
+/* Seções com imagens de fundo */
 #sobre {
-    min-height: 100vh;
+    height: 100vh;
     background: url('images/sobre-background.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    text-align: center;
     color: white;
 }
 
@@ -133,191 +202,155 @@ body {
 #sobre p {
     font-size: 1.2rem;
     max-width: 800px;
-    text-align: center;
 }
 
-/* Portfólio */
-#portfolio h2 {
-    font-family: 'Pinyon Script', cursive;
+/* Seção Serviços */
+#servicos {
+    height: 100vh; 
+    background: url('images/servicos-background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#servicos h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: black;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+#servicos p {
+    font-size: 1.2rem;
+    max-width: 800px;
 }
 
-.portfolio-item {
-    position: relative;
-    background-color: #ddd;
-    padding: 20px;
-    height: 200px;
+/* Seção Investimento e Agenda */
+#investir {
+    height: 90vh; 
+    background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
-    transition: background-color 0.5s ease;
-}
-
-.portfolio-item span {
-    position: absolute;
-    font-family: 'Pinyon Script', cursive;
-    font-size: 1.5rem;
-    color: black;
-    z-index: 2;
+    padding: 20px;
     text-align: center;
+    color: white;
 }
 
-.portfolio-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 1;
-}
-
-.portfolio-item:hover::before,
-.portfolio-item.touch-active::before {
-    opacity: 1;
-}
-
-/* Cores e Imagens Específicas */
-.portfolio-item.despensa {
-    background-color: #a57474;
-}
-
-.portfolio-item.despensa::before {
-    background-image: url('images/despensa.jpg');
-}
-
-.portfolio-item.quarto {
-    background-color: #6f8070;
-}
-
-.portfolio-item.quarto::before {
-    background-image: url('images/quarto.jpg');
-}
-
-.portfolio-item.banheiro {
-    background-color: #a78686;
-}
-
-.portfolio-item.banheiro::before {
-    background-image: url('images/banheiro.jpg');
-}
-
-.portfolio-item.cozinha {
-    background-color: #d6cda8;
-}
-
-.portfolio-item.cozinha::before {
-    background-image: url('images/cozinha.jpg');
-}
-
-.portfolio-item.sala {
-    background-color: #81b8d5;
-}
-
-.portfolio-item.sala::before {
-    background-image: url('images/sala.jpg');
-}
-
-.portfolio-item.guarda-roupa {
-    background-color: #bf90cb;
-}
-
-.portfolio-item.guarda-roupa::before {
-    background-image: url('images/guarda-roupa.jpg');
-}
-
-/* Slider */
-.slider {
-    margin-top: 40px;
-}
-
-.slider h3 {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 2rem;
+#investir h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    color: black;
 }
 
-.slider-content {
-    display: flex;
-    overflow-x: scroll;
-    gap: 10px;
+#investir p {
+    font-size: 1.2rem;
+    max-width: 800px;
 }
 
-.slider-content img {
-    width: 100%;
-    max-width: 300px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Investimento e Agenda */
-.investment-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.investment-image {
-    width: 300px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Responsividade */
-@media (max-width: 1200px) {
-    .container {
-        max-width: 1000px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .container {
-        max-width: 800px;
-    }
-}
-
-@media (max-width: 800px) {
-    .container {
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        max-width: 500px;
-    }
-}
-
-@media (max-width: 500px) {
-    .container {
+/* =============================
+   ====== LAYOUT DESKTOP =======
+   (telas >= 769px, mantemos seu layout fixo)
+   ============================= */
+@media (min-width: 769px) {
+    /* Menu Superior (Header) */
+    header#menu {
+        position: relative;
         width: 100%;
-        padding: 0 10px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    #menu {
+    .logo {
+        margin-left: 10px;
+    }
+
+    .logo img {
+        width: 215px;
+        height: 115px;
+    }
+
+    /* Nav Links */
+    .nav-links {
+        /* Centralizado com Flexbox, sem position absolute */
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.6rem;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: red;
+    }
+
+    /* Ícones de Contato */
+    .contacts {
+        display: flex;
+        gap: 10px;
+        /* Removido position: relative e posições absolutas */
+    }
+
+    .contacts a img {
+        /* Manter tamanho consistente */
+        width: 30px;
+        height: 30px;
+        transition: transform 0.2s;
+    }
+
+    .contacts a img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Seção Hero (Inicio) */
+    #inicio {
+        height: 780px; /* valor fixo como no seu código */
+        background: url('images/hero.jpg') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Slider (mantemos o layout fixo) */
+    .slider {
+        width: 55%;
+        height: 750px;
+        margin: 30px auto;
+    }
+}
+
+/* =============================
+   ====== LAYOUT MOBILE ========
+   (telas <= 768px, layout responsivo)
+   ============================= */
+@media (max-width: 768px) {
+
+    /* HEADER RESTRUTURADO NO CELULAR */
+    header#menu {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        padding: 10px;
     }
 
+    .logo {
+        margin-left: 0; /* Remove margem no mobile */
+    }
+
+    .logo img {
+        width: 180px; /* Ajuste para mobile */
+        height: auto;
+    }
+
+    /* Nav Links no mobile */
     .nav-links {
         flex-direction: column;
         width: 100%;
@@ -327,31 +360,112 @@ body {
     .nav-links a {
         padding: 10px 0;
         width: 100%;
-        text-align: left;
+        text-align: center; /* Centraliza os links */
+        font-size: 1.4rem; /* Ajuste para melhor legibilidade */
     }
 
-    .portfolio-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Contatos no mobile */
+    .contacts {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .contacts a img {
+        width: 40px; /* Aumenta o tamanho dos ícones no mobile */
+        height: 40px;
+    }
+
+    /* Seção Hero no mobile */
+    #inicio {
+        height: auto; /* Permite altura automática */
+        padding: 20px 0;
+    }
+
+    /* Vídeo Responsivo */
+    .video-background {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Reduz tamanho da fonte no mobile */
+        text-align: center;
+        padding: 0 10px; /* Espaçamento lateral */
+    }
+
+    /* Portfólio no mobile */
+    #portfolio .portfolio-grid {
+        grid-template-columns: 1fr; /* 1 coluna no mobile */
+        left: 0; /* Remove deslocamento */
     }
 
     .portfolio-item {
+        width: 100%; 
+        max-width: 100%;
         height: auto;
-        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .portfolio-item span {
+        font-size: 2rem; /* Ajuste para legibilidade */
+    }
+
+    /* Slider no mobile */
+    .slider {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
     }
 
     .slider-content img {
-        max-width: 200px;
+        max-height: none;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Investimento e Agenda no mobile */
+    .investment-images {
+        flex-direction: column;
+        align-items: center;
     }
 
     .investment-image {
         width: 100%;
+        max-width: 300px;
+        height: auto;
     }
 
+    /* Frase de Impacto no mobile */
     #impacto .impact-text {
         font-size: 1.2rem;
     }
+}
+
+/* =============================
+   ====== LAYOUT SUPER MOBILE ========
+   (telas <= 480px, ajustes adicionais)
+   ============================= */
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 1.2rem; /* Reduz ainda mais a fonte */
+    }
+
+    .portfolio-item span {
+        font-size: 1.8rem; /* Ajuste para melhor legibilidade */
+    }
+
+    .slider h3 {
+        font-size: 2.5rem; /* Reduz o título do slider */
+    }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Mais redução no título do Hero */
+    }
+
+    .contacts a img {
+        width: 35px; /* Ajuste de tamanho para super mobile */
+        height: 35px;
     }
 }
