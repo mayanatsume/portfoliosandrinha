@@ -18,14 +18,21 @@ body {
 .container {
     width: 100%;
     max-width: 1200px; 
-    margin: 0 auto;
-    padding: 0 15px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Menu e Logo */
+header#menu {
+    position: relative;
+    width: 100%;
+    height: auto; 
+    /* Mantém esse header sem travar altura */
+  }
+  
 .logo {
     position: relative; 
-    margin-left: 5px;
+    margin-left: 80px;
 }
 
 .logo img {
@@ -72,7 +79,7 @@ body {
 .nav-links {
     position: absolute; 
     top: 90px;
-    left: 85%;
+    left:120%;
     transform: translateX(-50%);
     display: flex;
     gap: 20px;
@@ -117,7 +124,7 @@ body {
 
 /* Seção Sobre */
 #sobre {
-    height: 780px;
+    height: 820px;
     background: url('images/sobre-background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -145,16 +152,16 @@ body {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     position: relative;
-    left: 10px;
+    left:200px;
     transition: left 0.5s ease;
 }
 
 .portfolio-item {
-    width: 85%;
-    max-width: 550px;
+    width: 100%;
+    max-width: 800px;
     height: 350px;
     margin: 0 auto;
     position: relative;
@@ -216,8 +223,8 @@ body {
 
 /* Slider */
 .slider {
-    width: 55%;
-    height: 750px;
+    width: 75%;
+    height: 850px;
     overflow: hidden;
     position: relative;
     margin: 30px auto;
@@ -245,7 +252,7 @@ body {
 
 /* Seção Serviços */
 #servicos {
-    height: 810px;
+    height: 920px;
     background: url('images/servicos-background.jpg') no-repeat center center/cover;
     display: flex;
     display: flex;
@@ -266,7 +273,7 @@ body {
 
 /* Seção Investir */
 #investir {
-    height: 810px;
+    height: 900px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
