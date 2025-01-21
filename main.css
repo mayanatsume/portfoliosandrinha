@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /*Impede a rolagem horizontal */
 }
 
 /* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
@@ -64,7 +63,7 @@ header#menu {
     margin: 0;
     position: absolute; /* Agora o texto também pode ser posicionado livremente */
     top: 20px; /* Ajuste a posição vertical */
-    left: 20px; /* Ajuste a posição horizontal */
+    left: 600px; /* Ajuste a posição horizontal */
 }
 
 /* Contêiner dos Botões */
@@ -78,36 +77,36 @@ header#menu {
 #barra .contacts .phone-btn {
     position: absolute;
     top: 50px; /* Ajuste para cima/baixo */
-    left: 50px; /* Ajuste para a direita/esquerda */
+    left: 10px; /* Ajuste para a direita/esquerda */
 }
 
 #barra .contacts .phone-btn img {
-    width: 300px; /* Largura do botão */
+    width: 400px; /* Largura do botão */
     height: 100px;
 }
 
 /* Botão de Email */
 #barra .contacts .email-btn {
     position: absolute;
-    top: 50px; /* Ajuste vertical */
-    left: 350px; /* Ajuste horizontal */
+    top: 60px; /* Ajuste vertical */
+    left: 880px; /* Ajuste horizontal */
 }
 
 #barra .contacts .email-btn img {
-    width: 600px;
-    height: 80px;
+    width: 650px;
+    height: 70px;
 }
 
 /* Botão de Instagram */
 #barra .contacts .instagram-btn {
     position: absolute;
-    top: 120px; /* Ajuste vertical */
-    left: 450px; /* Ajuste horizontal */
+    top: 60px; /* Ajuste vertical */
+    left: 400px; /* Ajuste horizontal */
 }
 
 #barra .contacts .instagram-btn img {
-    width: 150px;
-    height: auto;
+    width: 510px;
+    height: 80px;
 }
 
 /* Hover nos Botões */
@@ -116,15 +115,13 @@ header#menu {
     transition: transform 0.3s ease; /* Suaviza o efeito */
 }
 
-
-
 .logo {
     position: relative; 
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .logo img {
-    width: 255px;
+    width: 280px;
     height: 155px;
 }
 
@@ -132,12 +129,13 @@ header#menu {
 .nav-links {
     position: absolute; 
     top: 120px;
-    left:70%;
+    left: 90%;
     transform: translateX(-50%);
     display: flex;
     gap: 20px;
     width: auto;
     height: auto;
+    overflow: visible; /* Garante que nada seja cortado */
 }
 
 .nav-links a {
