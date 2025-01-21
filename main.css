@@ -121,14 +121,14 @@ header#menu {
 }
 
 .logo img {
-    width: 280px;
-    height: 155px;
+    width: 320px;
+    height: 140px;
 }
 
 /* Nav Links */
 .nav-links {
     position: absolute; 
-    top: 120px;
+    top: 110px;
     left: 70%;
     transform: translateX(-50%);
     display: flex;
@@ -162,7 +162,7 @@ header#menu {
 /* Frase de Impacto */
 #impacto {
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     background: #f5f5f5;
 }
 
@@ -182,7 +182,7 @@ header#menu {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     color: white;
 }
@@ -199,7 +199,7 @@ header#menu {
 #portfolio {
     position: relative; /* Permite controle do layout interno */
     width: 120%; /* Garante que o contêiner ocupe toda a largura */
-    padding: 70px; /* Adiciona um espaçamento interno */
+    padding: 90px; /* Adiciona um espaçamento interno */
 }
 
 #portfolio h2 {
@@ -216,7 +216,7 @@ header#menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     gap: 20px;
-    padding-left: 90px; /* Empurra as colunas para a direita */
+    padding-left: 0px; /* Empurra as colunas para a direita */
     width: 120%; /* Ocupa toda a largura do contêiner */
     box-sizing: border-box; /* Inclui o padding no cálculo da largura */
     
@@ -228,7 +228,7 @@ header#menu {
     transition: transform 0.8s ease, opacity 0.8s ease; /* Animação suave */
     width: 130%;
     margin-left: 20px; /* Empurra cada caixa 50px para a direita */
-    max-width: 600px;
+    max-width: 590px;
     height: 400px;
     position: relative;
     background-color: #ddd;
