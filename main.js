@@ -48,4 +48,25 @@ portfolioItems.forEach(item => {
     }
 });
 
+// Efeito de deslizamento para as caixas do portfólio
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".portfolio-item");
+
+    const observerOptions = {
+        root: null, // Observa o viewport
+        rootMargin: "0px", // Margem para ativação
+        threshold: 0.1, // Quando 10% da caixa está visível
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible"); // Adiciona a classe para a animação
+            }
+        });
+    }, observerOptions);
+
+    // Observa cada item do portfólio
+    items.forEach(item => observer.observe(item));
+});
   

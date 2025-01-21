@@ -47,7 +47,7 @@ header#menu {
 #barra {
     position: relative; /* Define o ponto de referência para os elementos absolutos */
     width: 100%; /* Ocupa toda a largura */
-    height: 200px; /* Altura fixa */
+    height: 300px; /* Altura fixa */
     background: #f5f5f5; /* Fundo */
     padding: 20px;
     box-sizing: border-box; /* Inclui padding no cálculo de largura */
@@ -77,7 +77,7 @@ header#menu {
 #barra .contacts .phone-btn {
     position: absolute;
     top: 50px; /* Ajuste para cima/baixo */
-    left: 10px; /* Ajuste para a direita/esquerda */
+    left: 80px; /* Ajuste para a direita/esquerda */
 }
 
 #barra .contacts .phone-btn img {
@@ -88,19 +88,19 @@ header#menu {
 /* Botão de Email */
 #barra .contacts .email-btn {
     position: absolute;
-    top: 60px; /* Ajuste vertical */
-    left: 880px; /* Ajuste horizontal */
+    top: 200px; /* Ajuste vertical */
+    left: 730px; /* Ajuste horizontal */
 }
 
 #barra .contacts .email-btn img {
-    width: 650px;
+    width: 700px;
     height: 70px;
 }
 
 /* Botão de Instagram */
 #barra .contacts .instagram-btn {
     position: absolute;
-    top: 60px; /* Ajuste vertical */
+    top: 130px; /* Ajuste vertical */
     left: 400px; /* Ajuste horizontal */
 }
 
@@ -177,10 +177,16 @@ header#menu {
 #sobre {
     height: 1000px;
     background: url('images/sobre-background.jpg') no-repeat center center/cover;
+    background-size: 100% auto; 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
+
 
 #sobre h2 {
     font-size: 2.5rem;
@@ -191,35 +197,50 @@ header#menu {
     max-width: 800px;
 }
 
-/* Portfólio */
+#portfolio {
+    position: relative; /* Permite controle do layout interno */
+    width: 120%; /* Garante que o contêiner ocupe toda a largura */
+    padding: 70px; /* Adiciona um espaçamento interno */
+}
+
 #portfolio h2 {
     font-family: 'Pinyon Script', cursive;
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 20px;
+    position: relative; /* Permite ajustar com `left` */
+    left: 160px; /* Move o título 20px para a direita */
+    margin-bottom: 30px;
     color: black;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    justify-content: center;
-    position: relative;
-    left:50px;
-    transition: left 0.5s ease;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 20px;
+    padding-left: 90px; /* Empurra as colunas para a direita */
+    width: 120%; /* Ocupa toda a largura do contêiner */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+    
 }
 
 .portfolio-item {
-    width: 100%;
-    max-width: 800px;
-    height: 350px;
-    margin: 0 auto;
+    opacity: 0; /* Invisível inicialmente */
+    transform: translateX(-50px); /* Desloca 50px para a esquerda */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Animação suave */
+    width: 140%;
+    margin-left: 40px; /* Empurra cada caixa 50px para a direita */
+    max-width: 600px;
+    height: 400px;
     position: relative;
     background-color: #ddd;
-    overflow: hidden;
     cursor: pointer;
     transition: background-color 0.5s ease;
+}
+
+/* Estado quando visível: na posição correta, opacidade total */
+.portfolio-item.visible {
+    opacity: 1; /* Torna visível */
+    transform: translateX(0); /* Retorna à posição original */
 }
 
 .portfolio-item span {
@@ -297,7 +318,7 @@ header#menu {
     font-family: 'Pinyon Script', cursive;
     font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     color: black;
 }
 
@@ -305,17 +326,16 @@ header#menu {
 #servicos {
     height: 920px;
     background: url('images/servicos-background.jpg') no-repeat center center/cover;
-    background-size: 95% auto; 
+    background-size: 100% auto; 
     display: flex;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 #servicos h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 #servicos p {
@@ -327,7 +347,7 @@ header#menu {
 #investir {
     height: 900px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
-    background-size: 95% auto; 
+    background-size: 100% auto; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -339,7 +359,7 @@ header#menu {
 
 #investir h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 #investir p {
