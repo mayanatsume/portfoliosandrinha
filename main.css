@@ -129,7 +129,7 @@ header#menu {
 .nav-links {
     position: absolute; 
     top: 120px;
-    left: 80%;
+    left: 75%;
     transform: translateX(-50%);
     display: flex;
     gap: 20px;
