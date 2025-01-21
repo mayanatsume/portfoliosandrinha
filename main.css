@@ -31,72 +31,107 @@ header#menu {
     /* Mantém esse header sem travar altura */
   }
   
-  #barra {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background: #f5f5f5;
-    padding: 10px;
+/* Estilo Geral da Barra */
+#barra {
+    position: relative; /* Contêiner pai */
+    display: flex; /* Ativa Flexbox */
+    justify-content: space-between; /* Espaçamento uniforme entre texto e botões */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Ocupa toda a largura */
+    background: #f5f5f5; /* Fundo claro */
+    padding: 20px; /* Espaçamento interno */
     height: 200px; /* Altura fixa */
-  }
-  
-  #barra p {
-    font-family: 'Pinyon Script', cursive; /* Fonte estilizada */
-    font-size: 3rem; /* Ajuste o tamanho conforme necessário */
-    font-style: italic; /* Texto em itálico */
-    color: #333; /* Cor do texto */
-    margin: 0; /* Remove espaçamento padrão */
-  }
-  
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+/* Contêiner Geral da Barra */
+#barra {
+    position: relative; /* Define o ponto de referência para os elementos absolutos */
+    width: 100%; /* Ocupa toda a largura */
+    height: 200px; /* Altura fixa */
+    background: #f5f5f5; /* Fundo */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding no cálculo de largura */
+}
+
+/* Texto "Contactos" */
+#barra p {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    position: absolute; /* Agora o texto também pode ser posicionado livremente */
+    top: 20px; /* Ajuste a posição vertical */
+    left: 20px; /* Ajuste a posição horizontal */
+}
+
+/* Contêiner dos Botões */
+#barra .contacts {
+    position: relative; /* Pode ser mantido como referência interna (opcional) */
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ajusta à altura do contêiner */
+}
+
+/* Botão de Telefone */
+#barra .contacts .phone-btn {
+    position: absolute;
+    top: 50px; /* Ajuste para cima/baixo */
+    left: 50px; /* Ajuste para a direita/esquerda */
+}
+
+#barra .contacts .phone-btn img {
+    width: 300px; /* Largura do botão */
+    height: 100px;
+}
+
+/* Botão de Email */
+#barra .contacts .email-btn {
+    position: absolute;
+    top: 50px; /* Ajuste vertical */
+    left: 350px; /* Ajuste horizontal */
+}
+
+#barra .contacts .email-btn img {
+    width: 600px;
+    height: 80px;
+}
+
+/* Botão de Instagram */
+#barra .contacts .instagram-btn {
+    position: absolute;
+    top: 120px; /* Ajuste vertical */
+    left: 450px; /* Ajuste horizontal */
+}
+
+#barra .contacts .instagram-btn img {
+    width: 150px;
+    height: auto;
+}
+
+/* Hover nos Botões */
+#barra .contacts a img:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    transition: transform 0.3s ease; /* Suaviza o efeito */
+}
+
+
+
 .logo {
     position: relative; 
     margin-left: 50px;
 }
 
 .logo img {
-    width: 215px;
-    height: 115px;
-}
-
-/* Contatos (Botões) */
-.phone-btn {
-    position: absolute;
-    top: 2050px;
-    left: -10px;
-}
-.phone-btn img {
-    width: 400px;
-    height: 90px;
-}
-
-.email-btn {
-    position: absolute;
-    top: 2080px;
-    left: 550px;
-}
-.email-btn img {
-    width: 690px;
-    height: 70px;
-}
-
-.instagram-btn {
-    position: absolute;
-    top: 2000px;
-    left: 250px;
-}
-.instagram-btn img {
-    width: 465px;
-    height: 80px;
-}
-
-.contacts a img:hover {
-    transform: scale(1.1);
+    width: 255px;
+    height: 155px;
 }
 
 /* Nav Links */
 .nav-links {
     position: absolute; 
-    top: 80px;
+    top: 120px;
     left:70%;
     transform: translateX(-50%);
     display: flex;
@@ -119,7 +154,7 @@ header#menu {
 
 /* Seção Hero */
 #inicio {
-    height: 810px; 
+    height: 900px; 
     background: url('images/hero.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
@@ -142,7 +177,7 @@ header#menu {
 
 /* Seção Sobre */
 #sobre {
-    height: 820px;
+    height: 1000px;
     background: url('images/sobre-background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;

@@ -49,18 +49,11 @@ body, html {
     #introSection {
         height: 50vh; /* Ajuste a altura conforme necessário para dispositivos menores */
     }
-
-    .video-background {
-        /* Possíveis ajustes adicionais */
-    }
 }
 
 @media (max-width: 480px) {
     #introSection {
         height: 30vh; /* Ajuste ainda mais a altura para telas muito pequenas */
     }
-
-    .video-background {
-        /* Possíveis ajustes adicionais */
-    }
 }
+
