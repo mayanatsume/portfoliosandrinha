@@ -1,49 +1,76 @@
-// Navegação suave
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Navegação suave
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
     });
-});
-
-// Revelar imagens nos quadrados ao passar o mouse
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    const img = item.getAttribute('data-img');
-    item.style.backgroundImage = `url(${img})`;
-});
-
-// Slider (Antes & Depois)
-let currentIndex = 0;
-const slides = document.querySelectorAll('.slider-content img');
-const totalSlides = slides.length;
-
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    const sliderContent = document.querySelector('.slider-content');
-    sliderContent.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-setInterval(showNextSlide, 3000);
-
-// Suporte para toque nas caixas do portfólio
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-portfolioItems.forEach(item => {
-    if (isTouchDevice) {
-        // Para dispositivos de toque
+  
+    // 2. Revelar imagens nos quadrados (data-img)
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+      const imgPath = item.getAttribute('data-img');
+      if (imgPath) {
+        item.style.backgroundImage = `url(${imgPath})`;
+      }
+    });
+  
+    // 3. Slider (Antes & Depois)
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slider-content img');
+    const totalSlides = slides.length;
+  
+    function showNextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      const sliderContent = document.querySelector('.slider-content');
+      if (sliderContent) {
+        sliderContent.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    }
+    setInterval(showNextSlide, 3000);
+  
+    // 4. Suporte para toque (mobile) e hover (desktop) nas caixas
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  
+    portfolioItems.forEach(item => {
+      if (isTouchDevice) {
+        // Em dispositivos de toque, usamos clique para exibir imagem
         item.addEventListener('click', () => {
-            portfolioItems.forEach(el => el.classList.remove('touch-active')); // Remove outras classes ativas
-            item.classList.toggle('touch-active'); // Ativa a imagem da caixa tocada
+          // Remove estado ativo das outras caixas
+          portfolioItems.forEach(el => el.classList.remove('touch-active'));
+          // Alterna a caixa atual
+          item.classList.toggle('touch-active');
         });
-    } else {
-        // Para dispositivos sem toque (desktop)
+      } else {
+        // Em desktop, usamos hover
         item.addEventListener('mouseover', () => {
-            item.classList.add('show-image'); // Mostra a imagem no hover
+          item.classList.add('show-image');
         });
         item.addEventListener('mouseout', () => {
-            item.classList.remove('show-image'); // Oculta a imagem ao sair do hover
+          item.classList.remove('show-image');
         });
-    }
-});
+      }
+    });
+  
+    // 5. IntersectionObserver p/ animar as caixas ao aparecer (deslize)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1 // Quando 10% do item ficar visível
+    });
+  
+    // Observa todas as .portfolio-item
+    portfolioItems.forEach(item => {
+      observer.observe(item);
+    });
+  });
+  

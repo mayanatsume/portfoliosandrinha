@@ -7,7 +7,7 @@
 
 /* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
 body {
-    width: 100%; /* Aqui você ajusta conforme seu layout de desktop */
+    width: 100%; /* Ajuste conforme seu layout (ou 1200px se quiser fixo) */
     margin: 0 auto; /* Se quiser centralizar em telas maiores ainda */
     overflow-x: auto; /* Se algo ultrapassar 1200px, rolagem horizontal */
     font-family: Arial, sans-serif;
@@ -28,7 +28,7 @@ header#menu {
     width: 100%;
     height: auto; 
     /* Mantém esse header sem travar altura */
-  }
+}
   
 .logo {
     position: relative; 
@@ -140,7 +140,7 @@ header#menu {
     max-width: 800px;
 }
 
-/* Portfólio */
+/* Título da Seção Portfólio */
 #portfolio h2 {
     font-family: 'Pinyon Script', cursive;
     font-size: 4rem;
@@ -149,6 +149,7 @@ header#menu {
     color: black;
 }
 
+/* Grid do Portfólio */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -159,6 +160,7 @@ header#menu {
     transition: left 0.5s ease;
 }
 
+/* Cada item do Portfólio */
 .portfolio-item {
     width: 100%;
     max-width: 800px;
@@ -169,6 +171,11 @@ header#menu {
     overflow: hidden;
     cursor: pointer;
     transition: background-color 0.5s ease;
+    
+    /* ADIÇÃO: Animação de deslize (estado inicial) */
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 1s ease; /* para suavizar a entrada */
 }
 
 .portfolio-item span {
@@ -216,9 +223,22 @@ header#menu {
 .portfolio-item.guarda-roupa { background-color: #bf90cb; }
 .portfolio-item.guarda-roupa::before { background-image: url('images/guarda-roupa.jpg'); }
 
+/* Hover normal */
 .portfolio-item:hover::before,
 .portfolio-item:focus::before {
     opacity: 1;
+}
+
+/* ADIÇÃO: Quando a classe .slide-in é adicionada (IntersectionObserver) */
+.portfolio-item.slide-in {
+    transform: translateX(0); /* Anima para posição 0 */
+    opacity: 1;              /* Fica visível */
+}
+
+/* ADIÇÃO: Quando for dispositivo de toque (classe .touch-active) ou hover especial (.show-image) */
+.portfolio-item.show-image::before,
+.portfolio-item.touch-active::before {
+    opacity: 1; /* Exibe a imagem */
 }
 
 /* Slider */
@@ -254,12 +274,11 @@ header#menu {
 #servicos {
     height: 920px;
     background: url('images/servicos-background.jpg') no-repeat center center/cover;
-    display: flex;
+    background-size: 95% auto; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 #servicos h2 {
     font-size: 2.5rem;
@@ -275,6 +294,7 @@ header#menu {
 #investir {
     height: 900px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
+    background-size: 95% auto; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -293,4 +313,3 @@ header#menu {
     font-size: 1.2rem;
     max-width: 800px;
 }
-

@@ -2,30 +2,33 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <!-- FORÇA O LAYOUT DE 1200PX E UM ZOOM INICIAL DE 0.3 (30%) NO CELULAR -->
-  <meta name="viewport" content="width=1200, initial-scale=0.3, user-scalable=yes">
-  <title>Meu Portfólio (Brute Force)</title>
+  <!-- Ajuste a viewport como preferir. Se quiser brute force, use width=1200. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Sandrinha</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-  <!-- Menu Superior -->
-  <header id="menu" class="container">
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo" id="logoImg">
+  <!-- SEÇÃO DE INTRO (VÍDEO) -->
+  <section id="intro">
+    <video 
+      id="introVideo"
+      autoplay
+      muted
+      playsinline
+      loop
+      preload="auto"
+      style="width: 100%; height: auto; object-fit: cover;"
+    >
+      <source src="intro-canva.mp4" type="video/mp4">
+      <!-- Se quiser, coloque um fallback de texto ou imagem aqui. -->
+    </video>
+  </section>
 
-      <div class="contacts">
-        <!-- Seus links de telefone, email, instagram etc. -->
-        <a href="tel:+351919736324" target="_blank" class="phone-btn">
-          <img src="images/phone-icon.png" alt="Telefone">
-        </a>
-        <a href="mailto:elisandrapersonalorganaize@gmail.com" target="_blank" class="email-btn">
-          <img src="images/email-icon.png" alt="Email">
-        </a>
-        <a href="https://www.instagram.com/elisandrapersonalorganaize" target="_blank" class="instagram-btn">
-          <img src="images/instagram-icon.png" alt="Instagram">
-        </a>
-      </div>
+  <!-- CABEÇALHO (LOGO + LINKS) -->
+  <header id="menu">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
     </div>
     <nav class="nav-links">
       <a href="#sobre">Sobre</a>
@@ -35,25 +38,27 @@
     </nav>
   </header>
 
-  <!-- Seção Hero (Topo com Fundo) -->
-  <section id="inicio" class="section">
-    <div class="hero"></div>
+  <!-- SEÇÃO SOBRE (Imagem de fundo) -->
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>Texto sobre...</p>
   </section>
 
-  <!-- Frase de Impacto -->
-  <section id="impacto" class="section">
-    <h2 class="impact-text">"Organizar não é só empilhar! É liberar espaço para o novo chegar.</h2>
-    <h2 class="impact-text">A mente se acalma, o corpo respira, na organização, a vida gira."</h2>
-    <h2 class="impact-text">- Sandra Machado</h2>
+  <!-- BOTÕES DE CONTATO (abaixo da seção "Sobre") -->
+  <section id="contatos">
+    <a href="tel:+351919736324" class="phone-btn">
+      <img src="images/phone-icon.png" alt="Telefone">
+    </a>
+    <a href="mailto:elisandrapersonalorganaize@gmail.com" class="email-btn">
+      <img src="images/email-icon.png" alt="Email">
+    </a>
+    <a href="https://www.instagram.com/elisandrapersonalorganaize" class="instagram-btn">
+      <img src="images/instagram-icon.png" alt="Instagram">
+    </a>
   </section>
 
-  <!-- Seção Sobre -->
-  <section id="sobre" class="section">
-    <!-- ... conteúdo de "Sobre" -->
-  </section>
-
-  <!-- Seção Portfólio -->
-  <section id="portfolio" class="section container">
+  <!-- SEÇÃO PORTFÓLIO (Caixinhas ocupando 100% e deslizando) -->
+  <section id="portfolio">
     <h2>Portfólio</h2>
 
     <div class="portfolio-grid">
@@ -76,33 +81,21 @@
         <span>Roupeiro</span>
       </div>
     </div>
-
-    <!-- Slider (Antes & Depois) -->
-    <div class="slider">
-      <h3>Antes & Depois</h3>
-      <div class="slider-content">
-        <img src="images/antes1.jpg" alt="Antes 1">
-        <img src="images/depois1.jpg" alt="Depois 1">
-        <img src="images/antes2.jpg" alt="Antes 2">
-        <img src="images/depois2.jpg" alt="Depois 2">
-      </div>
-    </div>
   </section>
 
-  <!-- Seção Serviços -->
-  <section id="servicos" class="section">
-    <!-- ... conteúdo de "Serviços" -->
+  <!-- SEÇÃO SERVIÇOS -->
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <p>Descrição...</p>
   </section>
 
-  <!-- Seção Investimento -->
-  <section id="investir" class="section">
-    <div class="investment-images">
-      <div class="investment-image" id="investimento"></div>
-      <div class="investment-image" id="agenda"></div>
-    </div>
+  <!-- SEÇÃO INVESTIR -->
+  <section id="investir">
+    <h2>Investir</h2>
+    <p>Detalhes...</p>
   </section>
 
-  <!-- Scripts JS, se houver -->
+  <!-- Script opcional para fazer as caixinhas "deslizarem" ao aparecer na tela -->
   <script src="main.js"></script>
 </body>
 </html>
