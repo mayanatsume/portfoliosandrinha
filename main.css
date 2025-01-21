@@ -77,7 +77,7 @@ header#menu {
 #barra .contacts .phone-btn {
     position: absolute;
     top: 50px; /* Ajuste para cima/baixo */
-    left: 80px; /* Ajuste para a direita/esquerda */
+    left: 40px; /* Ajuste para a direita/esquerda */
 }
 
 #barra .contacts .phone-btn img {
@@ -89,7 +89,7 @@ header#menu {
 #barra .contacts .email-btn {
     position: absolute;
     top: 200px; /* Ajuste vertical */
-    left: 730px; /* Ajuste horizontal */
+    left: 500px; /* Ajuste horizontal */
 }
 
 #barra .contacts .email-btn img {
@@ -101,7 +101,7 @@ header#menu {
 #barra .contacts .instagram-btn {
     position: absolute;
     top: 130px; /* Ajuste vertical */
-    left: 400px; /* Ajuste horizontal */
+    left: 320px; /* Ajuste horizontal */
 }
 
 #barra .contacts .instagram-btn img {
@@ -129,7 +129,7 @@ header#menu {
 .nav-links {
     position: absolute; 
     top: 120px;
-    left: 75%;
+    left: 70%;
     transform: translateX(-50%);
     display: flex;
     gap: 20px;
