@@ -226,8 +226,8 @@ header#menu {
     opacity: 0; /* Invisível inicialmente */
     transform: translateX(-50px); /* Desloca 50px para a esquerda */
     transition: transform 0.8s ease, opacity 0.8s ease; /* Animação suave */
-    width: 140%;
-    margin-left: 40px; /* Empurra cada caixa 50px para a direita */
+    width: 130%;
+    margin-left: 20px; /* Empurra cada caixa 50px para a direita */
     max-width: 600px;
     height: 400px;
     position: relative;
