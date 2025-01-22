@@ -7,10 +7,10 @@
 
 /* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
 body {
-    transform: translateX(-200px); /* Move a tela inicial 200px para a direita */
+    transform: translateX(-100px); /* Move a tela inicial 200px para a direita */
     transform-origin: left top; /* Define o ponto de referência como o topo esquerdo */
     overflow-x: hidden; /* Impede a rolagem horizontal */
-    width: 1400px; /* Largura lógica do layout */
+    width: 1200px; /* Largura lógica do layout */
     margin: 0;
     padding: 0;
 }
