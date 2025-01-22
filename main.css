@@ -10,19 +10,21 @@ body {
     margin: 0;
     padding: 0;
     width: 100%; /* Largura completa no computador */
-    overflow-x: visible; /* Permite rolagem horizontal, se necessário */
+    overflow-x: visible; /* Permite rolagem horizontal */
+    font-family: Arial, sans-serif; /* Fonte global */
 }
 
 /* Estilo para Telefones */
 @media (max-width: 768px) {
     body {
-        transform: translateX(-100px) scale(0.5); /* Ajusta foco e zoom */
-        transform-origin: left top; /* Ponto de referência */
+        transform: translateX(-50px) scale(0.4); /* Ajusta foco e zoom */
+        transform-origin: left top; /* Define o ponto de referência */
         overflow-x: hidden; /* Impede rolagem horizontal */
-        width: 1200px; /* Largura fixa lógica */
+        width: 1100px; /* Largura fixa lógica */
     }
 }
 
+/* Contêiner Principal */
 #app {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
@@ -31,17 +33,19 @@ body {
     overflow: hidden; /* Impede rolagem extra */
 }
 
+/* Contêiner de Conteúdo */
 .content {
-    width: 1250px; /* Define a largura do conteúdo */
-    max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura disponível */
-    text-align: center; /* Centraliza o texto dentro do contêiner */
+    width: 100%; /* Ajusta para preencher o layout */
+    max-width: 1200px; /* Garante que não ultrapasse */
+    text-align: center; /* Centraliza texto dentro */
+    margin: 0 auto; /* Centraliza o contêiner */
 }
 
-/* Container (se quiser, mas não é estritamente necessário, pois o body já tem 1200px) */
+/* Container Geral */
 .container {
     width: 100%;
-    max-width: 1200px; 
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -184,6 +188,8 @@ header#menu {
 
 /* Frase de Impacto */
 #impacto {
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove espaçamento interno */
     text-align: center;
     padding: 0px;
     background: #f5f5f5;
@@ -194,15 +200,18 @@ header#menu {
     font-size: 3rem;
     color: #333;
     font-style: italic;
+    margin: 0; /* Remove margens ao redor do texto */
 }
 
 /* Seção Sobre */
 #sobre {
+    margin: 0; /* Remove margens externas */
     height: 1100px;
     background: url('images/sobre-background.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0; /* Remove espaçamento interno */
 }
 
 #portfolio {
@@ -217,7 +226,7 @@ header#menu {
     text-align: center;
     position: relative; /* Permite ajustar com `left` */
     left: 160px; /* Move o título 20px para a direita */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: black;
 }
 
