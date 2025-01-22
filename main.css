@@ -14,6 +14,20 @@ body {
     box-sizing: border-box;
 }
 
+#app {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    overflow: hidden; /* Impede rolagem extra */
+}
+
+.content {
+    width: 1250px; /* Define a largura do conteúdo */
+    max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura disponível */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
 /* Container (se quiser, mas não é estritamente necessário, pois o body já tem 1200px) */
 .container {
     width: 100%;
