@@ -7,7 +7,7 @@
 
 /* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
 body {
-    width: 110%; /* Aqui você ajusta conforme seu layout de desktop */
+    width: 100%; /* Aqui você ajusta conforme seu layout de desktop */
     margin: 0 auto; /* Se quiser centralizar em telas maiores ainda */
     overflow-x: auto; /* Se algo ultrapassar 1200px, rolagem horizontal */
     font-family: Arial, sans-serif;
