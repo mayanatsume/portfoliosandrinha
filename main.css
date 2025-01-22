@@ -218,6 +218,7 @@ header#menu {
     position: relative; /* Permite controle do layout interno */
     width: 120%; /* Garante que o contêiner ocupe toda a largura */
     padding: 90px; /* Adiciona um espaçamento interno */
+    left: -200px; /* Move o portfólio 50px para a esquerda */
 }
 
 #portfolio h2 {
