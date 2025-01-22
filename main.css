@@ -19,7 +19,7 @@ body {
         transform: translateX(-100px) scale(0.5); /* Ajusta foco e zoom */
         transform-origin: left top; /* Ponto de referência */
         overflow-x: hidden; /* Impede rolagem horizontal */
-        width: 1400px; /* Largura fixa lógica */
+        width: 1200px; /* Largura fixa lógica */
     }
 }
 
