@@ -7,11 +7,12 @@
 
 /* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
 body {
-    width: 100%; /* Aqui você ajusta conforme seu layout de desktop */
-    margin: 0 auto; /* Se quiser centralizar em telas maiores ainda */
-    overflow-x: auto; /* Se algo ultrapassar 1200px, rolagem horizontal */
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+    transform: translateX(-200px); /* Move a tela inicial 200px para a direita */
+    transform-origin: left top; /* Define o ponto de referência como o topo esquerdo */
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+    width: 1400px; /* Largura lógica do layout */
+    margin: 0;
+    padding: 0;
 }
 
 #app {
