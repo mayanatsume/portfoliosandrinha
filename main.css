@@ -7,7 +7,7 @@
 
 /* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
 body {
-    width: 100%; /* Aqui você ajusta conforme seu layout de desktop */
+    width: 110%; /* Aqui você ajusta conforme seu layout de desktop */
     margin: 0 auto; /* Se quiser centralizar em telas maiores ainda */
     overflow-x: auto; /* Se algo ultrapassar 1200px, rolagem horizontal */
     font-family: Arial, sans-serif;
@@ -175,25 +175,11 @@ header#menu {
 
 /* Seção Sobre */
 #sobre {
-    height: 1000px;
+    height: 1100px;
     background: url('images/sobre-background.jpg') no-repeat center center/cover;
-    background-size: 100% auto; 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px;
-    text-align: center;
-    color: white;
-}
-
-#sobre h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0px;
-}
-#sobre p {
-    font-size: 1.2rem;
-    max-width: 800px;
 }
 
 #portfolio {
