@@ -5,14 +5,22 @@
     box-sizing: border-box;
 }
 
-/* FORÇAR LARGURA FIXA PARA REPRODUZIR O DESKTOP */
+/* Estilo Global para Computadores */
 body {
-    transform: translateX(-100px); /* Move a tela inicial 200px para a direita */
-    transform-origin: left top; /* Define o ponto de referência como o topo esquerdo */
-    overflow-x: hidden; /* Impede a rolagem horizontal */
-    width: 1200px; /* Largura lógica do layout */
     margin: 0;
     padding: 0;
+    width: 100%; /* Largura completa no computador */
+    overflow-x: visible; /* Permite rolagem horizontal, se necessário */
+}
+
+/* Estilo para Telefones */
+@media (max-width: 768px) {
+    body {
+        transform: translateX(-100px) scale(0.5); /* Ajusta foco e zoom */
+        transform-origin: left top; /* Ponto de referência */
+        overflow-x: hidden; /* Impede rolagem horizontal */
+        width: 1400px; /* Largura fixa lógica */
+    }
 }
 
 #app {
