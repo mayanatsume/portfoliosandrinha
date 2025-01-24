@@ -335,11 +335,13 @@ header#menu {
 
 /* Slider */
 .slider {
-    width: 80%;
-    height: 1000px;
+    width: 90%;
+    height: 1200px;
     overflow: hidden;
     position: relative;
-    margin: 10px auto;
+    margin: 30px auto;
+    margin-left: 200px; /* Move o slider para a direita */
+    margin-bottom: -60px; /* Diminui a distância com a imagem abaixo */
 }
 
 .slider-content {
