@@ -402,6 +402,6 @@ header#menu {
         left: 0;
         width: 100%;
         min-height: 800px; /* Ajuste conforme necessário */
-        margin-top: 0; /* Remove a margem superior */
+        margin-top: -300px; /* Remove a margem superior */
     }
 }
