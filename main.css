@@ -384,15 +384,15 @@ header#menu {
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
-    #investir {
-        margin-top: -1000px; /* Ajuste o valor conforme necessário */
+    /* Ajuste da seção #servicos */
+    #servicos {
+        margin-top: -500px; /* Move a seção para cima */
+        min-height: 800px; /* Ajuste conforme necessário */
     }
 
-    /* Ajuste da altura das seções */
-    #servicos {
-        min-height: 1000px; /* Ajuste conforme necessário */
-    }
+    /* Ajuste da seção #investir */
     #investir {
-        min-height: 1000px; /* Ajuste conforme necessário */
+        margin-top: -300px; /* Move a seção para cima */
+        min-height: 800px; /* Ajuste conforme necessário */
     }
 }
