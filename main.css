@@ -388,20 +388,16 @@ header#menu {
     /* Ajuste da seção #servicos */
     #servicos {
         position: relative;
-        top: 500px; /* Ajuste o valor conforme necessário */
-        left: 0;
-        width: 100%;
-        min-height: 800px; /* Ajuste conforme necessário */
+        top: -30vh; /* Move a seção para cima */
+        min-height: 80vh; /* Ajuste conforme necessário */
         margin-top: 0; /* Remove a margem superior */
     }
 
     /* Ajuste da seção #investir */
     #investir {
         position: relative;
-        top: -600px; /* Ajuste o valor conforme necessário */
-        left: 0;
-        width: 100%;
-        min-height: 800px; /* Ajuste conforme necessário */
-        margin-top: -300px; /* Remove a margem superior */
+        top: -60vh; /* Move a seção para cima */
+        min-height: 80vh; /* Ajuste conforme necessário */
+        margin-top: 0; /* Remove a margem superior */
     }
 }
