@@ -380,6 +380,7 @@ header#menu {
     padding: 0px;
     text-align: center;
     color: white;
+    margin-top: -120px; /* Remove a margem superior */
 }
 
 /* Ajustes para dispositivos móveis */
@@ -395,7 +396,7 @@ header#menu {
     /* Ajuste da seção #investir */
     #investir {
         position: relative;
-        top: -2000px; /* Move a seção para cima */
+        top: -500px; /* Move a seção para cima */
         min-height: 800px; /* Ajuste conforme necessário */
         margin-top: -500px; /* Remove a margem superior */
     }
