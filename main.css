@@ -23,6 +23,14 @@ body {
         overflow-x: hidden; /* Impede rolagem horizontal */
         width: 1200px; /* Largura fixa lógica */
     }
+    
+    /* Ajuste do espaçamento entre as seções */
+    #investir {
+        margin-top: -50px; /* Ajuste o valor conforme necessário */
+        /* Ou use position: relative e top */
+        position: relative;
+        top: -50px; /* Ajuste o valor conforme necessário */
+    }
 }
 
 /* Contêiner Principal */
