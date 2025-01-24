@@ -384,15 +384,6 @@ header#menu {
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
-    /* Mantém as transformações */
-    body {
-        transform: translateX(-30px) scale(0.3);
-        transform-origin: left top;
-        overflow-x: hidden;
-        width: 1200px;
-    }
-
-    /* Ajuste do espaçamento entre as seções */
     #investir {
         margin-top: -1000px; /* Ajuste o valor conforme necessário */
     }
@@ -405,18 +396,3 @@ header#menu {
         min-height: 1000px; /* Ajuste conforme necessário */
     }
 }
-
-/* Seção Investir */
-#investir {
-    min-height: 900px;
-    background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
-    background-size: 100% auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    text-align: center;
-    color: white;
-}
-
