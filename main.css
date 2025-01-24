@@ -394,15 +394,15 @@ header#menu {
 
     /* Ajuste do espaçamento entre as seções */
     #investir {
-        margin-top: -800px; /* Ajuste o valor conforme necessário */
+        margin-top: -1000px; /* Ajuste o valor conforme necessário */
     }
 
     /* Ajuste da altura das seções */
     #servicos {
-        min-height: 800px; /* Ajuste conforme necessário */
+        min-height: 1000px; /* Ajuste conforme necessário */
     }
     #investir {
-        min-height: 800px; /* Ajuste conforme necessário */
+        min-height: 1000px; /* Ajuste conforme necessário */
     }
 }
 
