@@ -23,14 +23,6 @@ body {
         overflow-x: hidden; /* Impede rolagem horizontal */
         width: 1200px; /* Largura fixa lógica */
     }
-
-    /* Ajuste do espaçamento entre as seções */
-    #investir {
-        margin-top: -200px; /* Ajuste o valor conforme necessário */
-        /* Ou use position: relative e top */
-        position: relative;
-        top: -50px; /* Ajuste o valor conforme necessário */
-    }
 }
 
 /* Contêiner Principal */
@@ -372,7 +364,7 @@ header#menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -400px; /* Move a seção para cima */
+    margin-top: -460px; /* Move a seção para cima */
 }
 
 
@@ -381,6 +373,44 @@ header#menu {
     min-height: 900px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     background-size: 100% auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    text-align: center;
+    color: white;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Mantém as transformações */
+    body {
+        transform: translateX(-30px) scale(0.3);
+        transform-origin: left top;
+        overflow-x: hidden;
+        width: 1200px;
+    }
+
+    /* Ajuste do espaçamento entre as seções */
+    #investir {
+        margin-top: -100px; /* Ajuste o valor conforme necessário */
+    }
+
+    /* Ajuste da altura das seções */
+    #servicos {
+        min-height: 800px; /* Ajuste conforme necessário */
+    }
+    #investir {
+        min-height: 800px; /* Ajuste conforme necessário */
+    }
+}
+
+/* Seção Investir */
+#investir {
+    min-height: 900px;
+    background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
+    background-size: 100% auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
