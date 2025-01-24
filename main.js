@@ -69,4 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Observa cada item do portfólio
     items.forEach(item => observer.observe(item));
 });
-  
+function ajustarLayoutMobile() {
+    const body = document.body;
+    if (window.innerWidth <= 768) {
+        body.classList.add('mobile'); // Adiciona a classe "mobile" ao body
+    } else {
+        body.classList.remove('mobile'); // Remove a classe "mobile" do body
+    }
+}
+
+// Executa a função ao carregar a página e ao redimensionar a janela
+window.addEventListener('load', ajustarLayoutMobile);
+window.addEventListener('resize', ajustarLayoutMobile);
