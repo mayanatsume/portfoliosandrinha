@@ -397,6 +397,6 @@ header#menu {
         position: relative;
         top: -2000px; /* Move a seção para cima */
         min-height: 800px; /* Ajuste conforme necessário */
-        margin-top: 0; /* Remove a margem superior */
+        margin-top: -500px; /* Remove a margem superior */
     }
 }
