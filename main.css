@@ -364,7 +364,7 @@ header#menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -460px; /* Move a seção para cima */
+    margin-top: -500px; /* Move a seção para cima */
 }
 
 
@@ -394,7 +394,7 @@ header#menu {
 
     /* Ajuste do espaçamento entre as seções */
     #investir {
-        margin-top: -100px; /* Ajuste o valor conforme necessário */
+        margin-top: -800px; /* Ajuste o valor conforme necessário */
     }
 
     /* Ajuste da altura das seções */
