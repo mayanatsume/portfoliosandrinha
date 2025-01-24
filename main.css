@@ -387,17 +387,21 @@ header#menu {
 @media (max-width: 768px) {
     /* Ajuste da seção #servicos */
     #servicos {
-        position: relative;
-        top: -500px; /* Move a seção para cima */
+        position: absolute;
+        top: 500px; /* Ajuste o valor conforme necessário */
+        left: 0;
+        width: 100%;
         min-height: 800px; /* Ajuste conforme necessário */
         margin-top: 0; /* Remove a margem superior */
     }
 
     /* Ajuste da seção #investir */
     #investir {
-        position: relative;
-        top: -500px; /* Move a seção para cima */
+        position: absolute;
+        top: 1300px; /* Ajuste o valor conforme necessário */
+        left: 0;
+        width: 100%;
         min-height: 800px; /* Ajuste conforme necessário */
-        margin-top: -500px; /* Remove a margem superior */
+        margin-top: 0; /* Remove a margem superior */
     }
 }
