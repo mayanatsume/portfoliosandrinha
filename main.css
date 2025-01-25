@@ -22,7 +22,7 @@ body {
         transform-origin: left top; /* Define o ponto de referência */
         overflow-x: hidden; /* Impede rolagem horizontal */
         width: 1200px; /* Largura fixa lógica */
-        max-height: 100vh; /* Limita a altura ao tamanho da viewport */
+        max-height: 30vh; /* Limita a altura ao tamanho da viewport */
         margin-top: 0; /* Remove a margem superior */
     }
 }
