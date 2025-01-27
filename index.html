@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Intro - Portfólio</title>
-    <link rel="stylesheet" href="intro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles/intro.css"> <!-- Link para o intro.css -->
+    <link rel="stylesheet" href="styles/main.css"> <!-- Link para o main.css -->
 </head>
 <body>
-    <!-- Seção de Introdução -->
-    <div id="introSection">
-        <video id="introVideo" class="video-background" autoplay muted playsinline controls>
-            <source src="intro-canva.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos em HTML5.
+    <!-- Contêiner do vídeo de introdução (visível apenas em mobile) -->
+    <div id="intro-video-mobile">
+        <video autoplay muted id="intro-canva">
+            <source src="images/intro-canva.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
         </video>
     </div>
 
-    <script src="intro.js"></script>
+    <!-- Conteúdo principal da página -->
+    <div id="main-content">
+        <!-- Seu conteúdo atual aqui -->
+    </div>
+
+    <script src="scripts/intro.js"></script> <!-- Link para o intro.js -->
+    <script src="scripts/main.js"></script> <!-- Link para o main.js -->
 </body>
-</html>
 </html>
