@@ -77,7 +77,7 @@ header#menu {
 #barra {
     position: relative; /* Define o ponto de referência para os elementos absolutos */
     width: 100%; /* Ocupa toda a largura */
-    height: 300px; /* Altura fixa */
+    height: 350px; /* Altura fixa */
     background: #a98963; /* Fundo */
     padding: 0px;
     box-sizing: border-box; /* Inclui padding no cálculo de largura */
@@ -118,25 +118,25 @@ header#menu {
 /* Botão de Email */
 #barra .contacts .email-btn {
     position: absolute;
-    top: 200px; /* Ajuste vertical */
-    left: 510px; /* Ajuste horizontal */
+    top: 230px; /* Ajuste vertical */
+    left: 30px; /* Ajuste horizontal */
 }
 
 #barra .contacts .email-btn img {
-    width: 700px;
-    height: 70px;
+    width: 850px;
+    height: 90px;
 }
 
 /* Botão de Instagram */
 #barra .contacts .instagram-btn {
     position: absolute;
-    top: 130px; /* Ajuste vertical */
-    left: 320px; /* Ajuste horizontal */
+    top: 140px; /* Ajuste vertical */
+    left: 40px; /* Ajuste horizontal */
 }
 
 #barra .contacts .instagram-btn img {
-    width: 510px;
-    height: 80px;
+    width: 610px;
+    height: 100px;
 }
 
 /* Hover nos Botões */
@@ -230,6 +230,18 @@ header#menu {
     z-index: 0; /* Garante que fique atrás da barra cinza */
 }
 
+/* Animação de entrada */
+@keyframes fadeInSlideRight {
+    0% {
+        opacity: 0; /* Inicia invisível */
+        transform: translateX(-20px); /* Desliza 20px para a esquerda */
+    }
+    100% {
+        opacity: 1; /* Torna-se visível */
+        transform: translateX(0); /* Retorna à posição original */
+    }
+}
+
 #portfolio {
     position: relative; /* Permite controle do layout interno */
     width: 120%; /* Garante que o contêiner ocupe toda a largura */
@@ -259,7 +271,7 @@ header#menu {
 
 .portfolio-item {
     opacity: 0; /* Invisível inicialmente */
-    transform: translateX(-50px); /* Desloca 50px para a esquerda */
+    transform: translateX(-20px); /* Desloca 50px para a esquerda */
     transition: transform 0.8s ease, opacity 0.8s ease; /* Animação suave */
     width: 130%;
     margin-left: 20px; /* Empurra cada caixa 50px para a direita */
@@ -274,7 +286,7 @@ header#menu {
 /* Estado quando visível: na posição correta, opacidade total */
 .portfolio-item.visible {
     opacity: 1; /* Torna visível */
-    transform: translateX(0); /* Retorna à posição original */
+    animation: fadeInSlideRight 0.8s ease-out forwards; /* Aplica a animação */
 }
 
 .portfolio-item span {
@@ -382,8 +394,8 @@ header#menu {
     padding: 0px;
     text-align: center;
     color: white;
-    margin-top: 30px; /* Remove a margem superior */
-    margin-bottom: 30px; /* Remove a margem superior */
+    margin-top: 0px; /* Remove a margem superior */
+    margin-bottom: 100px; /* Remove a margem superior */
 }
 
 /* Ajustes para dispositivos móveis */
