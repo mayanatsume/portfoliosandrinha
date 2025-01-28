@@ -2,26 +2,38 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styles/intro.css"> <!-- Link para o intro.css -->
-    <link rel="stylesheet" href="styles/main.css"> <!-- Link para o main.css -->
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <!-- Contêiner do vídeo de introdução (visível apenas em mobile) -->
+    <!-- Vídeo de introdução para mobile -->
     <div id="intro-video-mobile">
-        <video autoplay muted id="intro-canva">
+        <video 
+            autoplay 
+            muted 
+            playsinline 
+            id="intro-canva" 
+            onended="window.location.href='main.html';"
+            style="width: 100%; max-width: 100%; height: auto;"
+        >
             <source src="images/intro-canva.mp4" type="video/mp4">
             Seu navegador não suporta vídeos.
         </video>
     </div>
 
-    <!-- Conteúdo principal da página -->
-    <div id="main-content">
-        <!-- Seu conteúdo atual aqui -->
+    <!-- Conteúdo principal (aparecerá após a transição) -->
+    <div id="main-content" style="display: none;">
+        <h1>Bem-vindo ao Meu Portfólio!</h1>
+        <p>Esta é a página principal.</p>
     </div>
 
-    <script src="scripts/intro.js"></script> <!-- Link para o intro.js -->
-    <script src="scripts/main.js"></script> <!-- Link para o main.js -->
+    <script>
+        // Exibe o conteúdo principal se o vídeo não carregar
+        document.getElementById('intro-canva').addEventListener('error', () => {
+            document.getElementById('intro-video-mobile').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
