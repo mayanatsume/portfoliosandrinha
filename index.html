@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/intro.css"> <!-- Estilo adicional para animação de imagem -->
 </head>
 <body>
-    <!-- Vídeo de introdução para mobile -->
+    <!-- Tela de introdução para dispositivos móveis -->
+    <div id="intro-screen-mobile" style="display: none;">
+        <img src="images/intro-image.jpg" alt="Minha Introdução">
+    </div>
+
+    <!-- Vídeo de introdução para computadores -->
     <div id="intro-video-mobile">
         <video 
             autoplay 
@@ -22,18 +28,6 @@
         </video>
     </div>
 
-    <!-- Conteúdo principal (aparecerá após a transição) -->
-    <div id="main-content" style="display: none;">
-        <h1>Bem-vindo ao Meu Portfólio!</h1>
-        <p>Esta é a página principal.</p>
-    </div>
-
-    <script>
-        // Exibe o conteúdo principal se o vídeo não carregar
-        document.getElementById('intro-canva').addEventListener('error', () => {
-            document.getElementById('intro-video-mobile').style.display = 'none';
-            document.getElementById('main-content').style.display = 'block';
-        });
-    </script>
+    <script src="scripts/intro.js"></script>
 </body>
 </html>

@@ -102,7 +102,7 @@ header#menu {
 #barra {
     position: relative; /* Define o ponto de referência para os elementos absolutos */
     width: 100%; /* Ocupa toda a largura */
-    height: 350px; /* Altura fixa */
+    height: 380px; /* Altura fixa */
     background: #a98963; /* Fundo */
     padding: 0px;
     box-sizing: border-box; /* Inclui padding no cálculo de largura */
@@ -130,19 +130,19 @@ header#menu {
 /* Botão de Telefone */
 #barra .contacts .phone-btn {
     position: absolute;
-    top: 50px; /* Ajuste para cima/baixo */
+    top: 80px; /* Ajuste para cima/baixo */
     left: 47px; /* Ajuste para a direita/esquerda */
 }
 
 #barra .contacts .phone-btn img {
-    width: 400px; /* Largura do botão */
-    height: 100px;
+    width: 420px; /* Largura do botão */
+    height: 120px;
 }
 
 /* Botão de Email */
 #barra .contacts .email-btn {
     position: absolute;
-    top: 230px; /* Ajuste vertical */
+    top: 270px; /* Ajuste vertical */
     left: 30px; /* Ajuste horizontal */
 }
 
@@ -154,7 +154,7 @@ header#menu {
 /* Botão de Instagram */
 #barra .contacts .instagram-btn {
     position: absolute;
-    top: 140px; /* Ajuste vertical */
+    top: 180px; /* Ajuste vertical */
     left: 40px; /* Ajuste horizontal */
 }
 
@@ -408,7 +408,7 @@ header#menu {
 
 /* Seção Investir */
 #investir {
-    min-height: 650px;
+    min-height: 700px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     background-size: 100% auto; 
     display: flex;
@@ -419,7 +419,7 @@ header#menu {
     text-align: center;
     color: white;
     margin-top: 0px; /* Remove a margem superior */
-    margin-bottom: 100px; /* Remove a margem superior */
+    margin-bottom: 50px; /* Remove a margem superior */
 }
 
 /* Ajustes para dispositivos móveis */

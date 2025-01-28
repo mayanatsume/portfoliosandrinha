@@ -44,10 +44,59 @@ body, html {
     }
 }
 
+/* Estilo para dispositivos móveis */
+#intro-screen-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Fundo preto */
+    z-index: 9999;
+    overflow: hidden; /* Evita rolagem */
+    display: none; /* Inicialmente oculto */
+}
+
+/* Imagem central com efeito de abertura */
+#intro-screen-mobile img {
+    width: 100%;
+    height: auto;
+    animation: openEffect 3s ease-in-out forwards;
+    transform-origin: center;
+}
+
+/* Animação de abertura */
+@keyframes openEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Fade-out da tela móvel */
+@keyframes fadeOutMobile {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 /* Media Queries para Ajustes Específicos */
 @media (max-width: 768px) {
     #introSection {
         height: 50vh; /* Ajuste a altura conforme necessário para dispositivos menores */
+    }
+
+    #intro-screen-mobile {
+        display: flex; /* Ativa a introdução para dispositivos móveis */
     }
 }
 
