@@ -396,7 +396,7 @@ header#menu {
 
 /* Seção Serviços */
 #servicos {
-    min-height: 920px;
+    min-height: 900px;
     background: url('images/servicos-background.jpg') no-repeat center center/cover;
     background-size: 100% auto; 
     display: flex;
@@ -408,7 +408,7 @@ header#menu {
 
 /* Seção Investir */
 #investir {
-    min-height: 700px;
+    min-height: 720px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     background-size: 100% auto; 
     display: flex;
