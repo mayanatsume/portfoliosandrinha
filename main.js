@@ -69,15 +69,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Observa cada item do portfólio
     items.forEach(item => observer.observe(item));
 });
+
+// Ajustar layout para dispositivos móveis
 function ajustarLayoutMobile() {
     const body = document.body;
-    if (window.innerWidth <= 768) {
-        body.classList.add('mobile'); // Adiciona a classe "mobile" ao body
-    } else {
-        body.classList.remove('mobile'); // Remove a classe "mobile" do body
-    }
+
+    // Aguarda um pequeno delay para garantir que a viewport já foi aplicada corretamente
+    setTimeout(() => {
+        if (window.innerWidth <= 768) {
+            body.classList.add('mobile'); // Adiciona a classe "mobile" ao body
+            console.log("Modo mobile ativado.");
+        } else {
+            body.classList.remove('mobile'); // Remove a classe "mobile" do body
+            console.log("Modo desktop ativado.");
+        }
+    }, 100); // Pequeno atraso para evitar conflitos no carregamento
 }
 
 // Executa a função ao carregar a página e ao redimensionar a janela
-window.addEventListener('load', ajustarLayoutMobile);
+window.addEventListener('DOMContentLoaded', ajustarLayoutMobile); // Melhor que "load"
 window.addEventListener('resize', ajustarLayoutMobile);
