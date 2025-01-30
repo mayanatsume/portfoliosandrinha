@@ -168,6 +168,11 @@ header#menu {
     transition: transform 0.3s ease; /* Suaviza o efeito */
 }
 
+/* Ajuste de scroll para a seção Contactos */
+#barra {
+    scroll-margin-top: 120px; /* Ajusta a margem superior para evitar que o menu fixe sobre a seção */
+}
+
 .logo {
     position: relative; 
     margin-left: 0px;
