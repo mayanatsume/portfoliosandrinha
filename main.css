@@ -15,15 +15,14 @@ body {
 }
 
 
-/* Estilo para Telefones */
 @media (max-width: 768px) {
     body {
-        transform: translateX(-30px) scale(0.3); /* Ajusta foco e zoom */
-        transform-origin: left top; /* Define o ponto de referência */
-        overflow-x: hidden; /* Impede rolagem horizontal */
-        width: 1200px; /* Largura fixa lógica */
-        max-height: 40vh; /* Limita a altura ao tamanho da viewport */
-        margin-top: 0; /* Remove a margem superior */
+        transform: none; /* Remove escala errada */
+        transform-origin: initial; /* Restaura ponto de referência padrão */
+        overflow-x: auto; /* Permite rolagem horizontal caso necessário */
+        width: auto; /* Mantém a largura fluida */
+        max-height: none; /* Remove limitação desnecessária */
+        margin-top: 0; /* Mantém sem margem superior */
     }
 }
 
