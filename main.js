@@ -3,14 +3,19 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+        
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
 // Revelar imagens nos quadrados ao passar o mouse
 document.querySelectorAll('.portfolio-item').forEach(item => {
     const img = item.getAttribute('data-img');
-    item.style.backgroundImage = `url(${img})`;
+    if (img) {
+        item.style.backgroundImage = `url(${img})`;
+    }
 });
 
 // Slider (Antes & Depois)
@@ -34,16 +39,16 @@ portfolioItems.forEach(item => {
     if (isTouchDevice) {
         // Para dispositivos de toque
         item.addEventListener('click', () => {
-            portfolioItems.forEach(el => el.classList.remove('touch-active')); // Remove outras classes ativas
-            item.classList.toggle('touch-active'); // Ativa a imagem da caixa tocada
+            portfolioItems.forEach(el => el.classList.remove('touch-active'));
+            item.classList.toggle('touch-active');
         });
     } else {
         // Para dispositivos sem toque (desktop)
         item.addEventListener('mouseover', () => {
-            item.classList.add('show-image'); // Mostra a imagem no hover
+            item.classList.add('show-image');
         });
         item.addEventListener('mouseout', () => {
-            item.classList.remove('show-image'); // Oculta a imagem ao sair do hover
+            item.classList.remove('show-image');
         });
     }
 });
@@ -87,29 +92,5 @@ function ajustarLayoutMobile() {
 }
 
 // Executa a função ao carregar a página e ao redimensionar a janela
-window.addEventListener('DOMContentLoaded', ajustarLayoutMobile); // Melhor que "load"
+window.addEventListener('DOMContentLoaded', ajustarLayoutMobile);
 window.addEventListener('resize', ajustarLayoutMobile);
-
-// Navegação suave para todas as âncoras do menu
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-});
-
-// Garante que o viewport de main.html seja corretamente aplicado após a introdução
-function corrigirViewport() {
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (viewport) {
-        viewport.setAttribute("content", "width=1200, initial-scale=0.4, maximum-scale=2, user-scalable=yes");
-        console.log("Viewport ajustado corretamente.");
-    }
-}
-
-// Executa a correção assim que a página carrega
-window.addEventListener('DOMContentLoaded', corrigirViewport);

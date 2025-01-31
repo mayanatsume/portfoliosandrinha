@@ -14,6 +14,18 @@ body {
     font-family: Arial, sans-serif; /* Fonte global */
 }
 
+/* Estilo para Telefones */
+@media (max-width: 768px) {
+    body {
+        transform: translateX(-30px) scale(0.3); /* Ajusta foco e zoom */
+        transform-origin: left top; /* Define o ponto de referência */
+        overflow-x: hidden; /* Impede rolagem horizontal */
+        width: 1200px; /* Largura fixa lógica */
+        max-height: 40vh; /* Limita a altura ao tamanho da viewport */
+        margin-top: 0; /* Remove a margem superior */
+    }
+}
+
 /* Estilo para o vídeo de introdução (mobile) */
 #intro-video-mobile {
     display: none; /* Oculta por padrão */
