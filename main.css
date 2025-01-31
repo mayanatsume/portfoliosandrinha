@@ -14,16 +14,6 @@ body {
     font-family: Arial, sans-serif; /* Fonte global */
 }
 
-
-@media (max-width: 768px) {
-    body {
-        overflow-x: auto; /* Permite rolagem horizontal caso necessário */
-        width: auto; /* Mantém a largura fluida */
-        max-height: none; /* Remove limitação desnecessária */
-        margin-top: 0; /* Mantém sem margem superior */
-    }
-}
-
 /* Estilo para o vídeo de introdução (mobile) */
 #intro-video-mobile {
     display: none; /* Oculta por padrão */
