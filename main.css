@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%; /* Largura completa no computador */
-    overflow-x: visible; /* Permite rolagem horizontal */
+    overflow-x: hidden; /* Permite rolagem horizontal */
     font-family: Arial, sans-serif; /* Fonte global */
 }
 
