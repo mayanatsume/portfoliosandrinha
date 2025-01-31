@@ -17,8 +17,6 @@ body {
 
 @media (max-width: 768px) {
     body {
-        transform: none; /* Remove escala errada */
-        transform-origin: initial; /* Restaura ponto de referência padrão */
         overflow-x: auto; /* Permite rolagem horizontal caso necessário */
         width: auto; /* Mantém a largura fluida */
         max-height: none; /* Remove limitação desnecessária */
