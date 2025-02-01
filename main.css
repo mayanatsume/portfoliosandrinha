@@ -17,7 +17,7 @@ body {
 /* Estilo para Telefones */
 @media (max-width: 768px) {
     body {
-        transform: translateX(10px) scale(0.25); /* Ajusta foco e zoom */
+        transform: translateX(10px) scale(0.26); /* Ajusta foco e zoom */
         transform-origin: left top; /* Define o ponto de referência */
         overflow-x: hidden; /* Impede rolagem horizontal */
         width: 1200px; /* Largura fixa lógica */
@@ -412,7 +412,7 @@ header#menu {
 
 /* Seção Investir */
 #investir {
-    min-height: 720px;
+    min-height: 950px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     background-size: 100% auto; 
     display: flex;
@@ -431,7 +431,7 @@ header#menu {
     /* Ajuste da seção #servicos */
     #servicos {
         position: relative;
-        top: -30vh; /* Move a seção para cima */
+        top: 20vh; /* Move a seção para cima */
         min-height: 80vh; /* Ajuste conforme necessário */
         margin-top: 0; /* Remove a margem superior */
     }
@@ -439,7 +439,7 @@ header#menu {
     /* Ajuste da seção #investir */
     #investir {
         position: relative;
-        top: -10vh; /* Move a seção para cima */
+        top: 20vh; /* Move a seção para cima */
         min-height: 80vh; /* Ajuste conforme necessário */
         margin-top: 0; /* Remove a margem superior */
     }
