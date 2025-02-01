@@ -21,7 +21,7 @@ body {
         transform-origin: left top; /* Define o ponto de referência */
         overflow-x: hidden; /* Impede rolagem horizontal */
         width: 1200px; /* Largura fixa lógica */
-        max-height: 100vh; /* Limita a altura ao tamanho da viewport */
+        max-height: 140vh; /* Limita a altura ao tamanho da viewport */
         margin-top: 0; /* Remove a margem superior */
     }
 }
@@ -441,7 +441,7 @@ header#menu {
         position: relative;
         top: 100vh; /* Move a seção para cima */
         min-height: 140vh; /* Ajuste conforme necessário */
-        margin-top: 30px; /* Garante que fique abaixo de Investir */
+        margin-top: -30px; /* Garante que fique abaixo de Investir */
         margin-bottom: 50px; /* Adiciona espaço antes da seção de contactos */
         padding: 20px 0;
     }
