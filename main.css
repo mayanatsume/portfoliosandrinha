@@ -437,17 +437,26 @@ header#menu {
         padding: 40px 0; /* Espaçamento interno */
         background-size: cover;
     }
-    #investir {
-        min-height: 80vh; /* Reduz a altura para dispositivos menores */
-        margin-bottom: 80px;
-        padding: 40px 0;
 
-        /* Ajusta a imagem de fundo */
-        background-size: 80% auto; /* Aumenta a escala da imagem */
-        background-position: 50% 80%; /* Move a imagem verticalmente */
+   /* Ajustes na seção #investir */
+#investir {
+    position: relative; /* Permite controle livre sobre as posições */
+    min-height: 80vh; /* Altura ajustável */
+    margin-bottom: 80px; /* Garante espaço antes da próxima seção */
+    padding: 40px 0;
 
-        /* Usando transform para ajustar ainda mais */
-        transform: scale(1.2); /* Aumenta levemente a escala da seção */
-        transform-origin: center; /* Define o ponto de origem da transformação */
-    }
+    /* Ajustes para o background */
+    background-size: 100% auto; /* Ajusta o tamanho da imagem */
+    background-position: center center; /* Centraliza a imagem no fundo */
+
+    /* Usando transform para ajustar */
+    transform: scale(1.2); /* Ajuste o tamanho da seção */
+    transform-origin: center; /* Define o ponto de origem da transformação */
+
+    /* Posicionando a seção (livre para ajustes) */
+    top: 0px; /* Move a seção para cima ou para baixo */
+    left: 0px; /* Move a seção para a esquerda ou direita */
+    width: 100%; /* Ajusta a largura conforme necessário */
+    height: auto; /* Permite que a altura se ajuste livremente */
+}
 }
