@@ -17,11 +17,11 @@ body {
 /* Estilo para Telefones */
 @media (max-width: 768px) {
     body {
-        transform: translateX(10px) scale(0.2); /* Ajusta foco e zoom */
+        transform: translateX(10px) scale(0.3); /* Ajusta foco e zoom */
         transform-origin: left top; /* Define o ponto de referência */
         overflow-x: hidden; /* Impede rolagem horizontal */
         width: 1200px; /* Largura fixa lógica */
-        max-height: 50vh; /* Limita a altura ao tamanho da viewport */
+        max-height: 60vh; /* Limita a altura ao tamanho da viewport */
         margin-top: 0; /* Remove a margem superior */
     }
 }
