@@ -412,7 +412,7 @@ header#menu {
 
 /* Seção Investir */
 #investir {
-    min-height: 700px;
+    min-height: 950px;
     background: url('images/investimento-agenda.jpg') no-repeat center center/cover;
     background-size: 100% auto; 
     display: flex;
@@ -442,7 +442,7 @@ header#menu {
     #investir {
         position: relative;
         /*top: 100vh; /* Move a seção para cima */
-        min-height: 140vh; /* Ajuste conforme necessário */
+        min-height: 720px; /* Ajuste conforme necessário */
         height: auto;
         display: flex;
         justify-content: center;
