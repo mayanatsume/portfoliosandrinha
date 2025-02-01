@@ -437,49 +437,17 @@ header#menu {
         padding: 40px 0; /* Espaçamento interno */
         background-size: cover;
     }
-
-  /* Ajuste específico para #investir */
-  #investir {
-    position: relative;
-    min-height: 100vh; /* Altura dedicada */
-    margin-top: 0; /* Remove margem superior conflitante */
-    margin-bottom: 80px;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column; /* Alinhamento vertical */
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    clear: both; /* Garante quebra de fluxo */
-}
-
- /* Ajuste específico para #investir */
- #investir {
-    position: relative;
-    min-height: 100vh; /* Altura dedicada */
-    margin-top: 0; /* Remove margem superior conflitante */
-    margin-bottom: 80px;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column; /* Alinhamento vertical */
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    clear: both; /* Garante quebra de fluxo */
-}
-
-/* Seção investir - Espaço exclusivo */
-#investir::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Mantém o conteúdo na frente */
-    background: url(sua-imagem.jpg) no-repeat center/cover;
-}
-}
+        #investir {
+            --posicao-vertical: -200px;  /* controle de altura */
+            --zoom-imagem: 150%;         /* controle de zoom */
+            --corte-vertical: 30%;       /* controle de enquadramento */
+    
+            position: relative;
+            min-height: 80vh;
+            background-position: center var(--corte-vertical) !important;
+            background-size: var(--zoom-imagem) auto !important;
+            transform: translateY(var(--posicao-vertical));
+            margin-top: -100px;
+            z-index: 2;
+        }
+    }
