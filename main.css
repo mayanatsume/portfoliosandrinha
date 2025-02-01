@@ -422,7 +422,7 @@ header#menu {
     padding: 0px;
     text-align: center;
     color: white;
-    margin-top: 0px; /* Remove a margem superior */
+    margin-top: 50px; /* Remove a margem superior */
     margin-bottom: 50px; /* Remove a margem superior */
 }
 
