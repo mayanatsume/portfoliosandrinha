@@ -430,7 +430,7 @@ header#menu {
 @media (max-width: 768px) {
     /* Ajuste da seção #servicos */
     #servicos {
-        position: relative;
+        position: static;
         top: 100vh; /* Move a seção para cima */
         min-height: 140vh; /* Ajuste conforme necessário */
         margin-top: -1000px; /* Remove a margem superior */
@@ -441,7 +441,7 @@ header#menu {
 
     /* Ajuste da seção #investir */
     #investir {
-        position: relative;
+        position: static;
         /*top: 100vh; /* Move a seção para cima */
         min-height: 140vh; /* Ajuste conforme necessário */
         height: auto;
