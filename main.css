@@ -438,19 +438,48 @@ header#menu {
         background-size: cover;
     }
 
-    /* Ajuste da seção #investir */
-    #investir {
-        position: relative;
-        /*top: 100vh; /* Move a seção para cima */
-        min-height: 720px; /* Ajuste conforme necessário */
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
-        margin-top: 1000px; /* Garante que fique abaixo de Investir */
-        margin-bottom: 80px; /* Adiciona espaço antes da seção de contactos */
-        padding: 40px 0;
-    }
+  /* Ajuste específico para #investir */
+  #investir {
+    position: relative;
+    min-height: 100vh; /* Altura dedicada */
+    margin-top: 0; /* Remove margem superior conflitante */
+    margin-bottom: 80px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical */
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    clear: both; /* Garante quebra de fluxo */
 }
 
+ /* Ajuste específico para #investir */
+ #investir {
+    position: relative;
+    min-height: 100vh; /* Altura dedicada */
+    margin-top: 0; /* Remove margem superior conflitante */
+    margin-bottom: 80px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical */
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    clear: both; /* Garante quebra de fluxo */
+}
+
+/* Seção investir - Espaço exclusivo */
+#investir::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Mantém o conteúdo na frente */
+    background: url(sua-imagem.jpg) no-repeat center/cover;
+}
+}
