@@ -431,16 +431,17 @@ header#menu {
     /* Ajuste da seção #servicos */
     #servicos {
         position: relative;
-        top: 20vh; /* Move a seção para cima */
-        min-height: 80vh; /* Ajuste conforme necessário */
+        top: 100vh; /* Move a seção para cima */
+        min-height: 100vh; /* Ajuste conforme necessário */
         margin-top: 0; /* Remove a margem superior */
     }
 
     /* Ajuste da seção #investir */
     #investir {
         position: relative;
-        top: 20vh; /* Move a seção para cima */
-        min-height: 80vh; /* Ajuste conforme necessário */
+        top: 100vh; /* Move a seção para cima */
+        min-height: 10
+        0vh; /* Ajuste conforme necessário */
         margin-top: 0; /* Remove a margem superior */
     }
 }
