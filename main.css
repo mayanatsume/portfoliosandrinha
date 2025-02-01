@@ -441,7 +441,6 @@ header#menu {
             --posicao-vertical: -200px;  /* controle de altura */
             --zoom-imagem: 150%;         /* controle de zoom */
             --corte-vertical: 30%;       /* controle de enquadramento */
-    
             position: relative;
             min-height: 80vh;
             background-position: center var(--corte-vertical) !important;
