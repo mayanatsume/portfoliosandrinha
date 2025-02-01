@@ -432,8 +432,8 @@ header#menu {
     #servicos {
         position: relative;
         top: 100vh; /* Move a seção para cima */
-        min-height: 100vh; /* Ajuste conforme necessário */
-        margin-top: 0; /* Remove a margem superior */
+        min-height: 140vh; /* Ajuste conforme necessário */
+        margin-top: -500px; /* Remove a margem superior */
     }
 
     /* Ajuste da seção #investir */
