@@ -406,7 +406,7 @@ header#menu {
     display: flex;
     justify-content: center;
     align-items: center;
-   /* margin-top: -500px; /* Move a seção para cima */
+    margin-top: -500px; /* Move a seção para cima */
 }
 
 
@@ -422,25 +422,27 @@ header#menu {
     padding: 0px;
     text-align: center;
     color: white;
-    margin-top: 50px; /* Remove a margem superior */
+    margin-top: 0px; /* Remove a margem superior */
     margin-bottom: 50px; /* Remove a margem superior */
 }
 
-/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     /* Ajuste da seção #servicos */
     #servicos {
         position: relative;
-        top: -30vh; /* Move a seção para cima */
-        min-height: 80vh; /* Ajuste conforme necessário */
-        margin-top: 0; /* Remove a margem superior */
+        min-height: auto; /* Permite crescimento natural */
+        height: auto;
+        margin-top: 20px; /* Pequeno espaço antes da seção */
+        padding: 30px 0; /* Espaçamento interno */
     }
 
     /* Ajuste da seção #investir */
     #investir {
         position: relative;
-        top: -60vh; /* Move a seção para cima */
-        min-height: 80vh; /* Ajuste conforme necessário */
-        margin-top: 0; /* Remove a margem superior */
+        min-height: auto;
+        height: auto;
+        margin-top: 40px; /* Espaço antes da seção */
+        padding: 30px 0; /* Ajuste interno */
     }
 }
+
