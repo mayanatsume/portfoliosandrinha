@@ -443,8 +443,8 @@ header#menu {
         padding: 40px 0;
 
         /* Ajusta a imagem de fundo */
-        background-size: 120% auto; /* Aumenta a escala da imagem */
-        background-position: 50% 60%; /* Move a imagem verticalmente */
+        background-size: 80% auto; /* Aumenta a escala da imagem */
+        background-position: 50% 80%; /* Move a imagem verticalmente */
 
         /* Usando transform para ajustar ainda mais */
         transform: scale(1.2); /* Aumenta levemente a escala da seção */
