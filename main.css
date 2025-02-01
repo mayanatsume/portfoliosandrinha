@@ -426,23 +426,22 @@ header#menu {
     margin-bottom: 50px; /* Remove a margem superior */
 }
 
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     /* Ajuste da seção #servicos */
     #servicos {
         position: relative;
-        min-height: auto; /* Permite crescimento natural */
-        height: auto;
-        margin-top: 20px; /* Pequeno espaço antes da seção */
-        padding: 30px 0; /* Espaçamento interno */
+        top: -30vh; /* Move a seção para cima */
+        min-height: 80vh; /* Ajuste conforme necessário */
+        margin-top: 0; /* Remove a margem superior */
     }
 
     /* Ajuste da seção #investir */
     #investir {
         position: relative;
-        min-height: auto;
-        height: auto;
-        margin-top: 40px; /* Espaço antes da seção */
-        padding: 30px 0; /* Ajuste interno */
+        top: -10vh; /* Move a seção para cima */
+        min-height: 80vh; /* Ajuste conforme necessário */
+        margin-top: 0; /* Remove a margem superior */
     }
 }
 
