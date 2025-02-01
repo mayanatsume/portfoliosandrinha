@@ -437,16 +437,17 @@ header#menu {
         padding: 40px 0; /* Espaçamento interno */
         background-size: cover;
     }
-        #investir {
-            --posicao-vertical: -200px;  /* controle de altura */
-            --zoom-imagem: 150%;         /* controle de zoom */
-            --corte-vertical: 30%;       /* controle de enquadramento */
-            position: relative;
-            min-height: 80vh;
-            background-position: center var(--corte-vertical) !important;
-            background-size: var(--zoom-imagem) auto !important;
-            transform: translateY(var(--posicao-vertical));
-            margin-top: -100px;
-            z-index: 2;
-        }
+    #investir {
+        min-height: 80vh; /* Reduz a altura para dispositivos menores */
+        margin-bottom: 80px;
+        padding: 40px 0;
+
+        /* Ajusta a imagem de fundo */
+        background-size: 120% auto; /* Aumenta a escala da imagem */
+        background-position: 50% 60%; /* Move a imagem verticalmente */
+
+        /* Usando transform para ajustar ainda mais */
+        transform: scale(1.2); /* Aumenta levemente a escala da seção */
+        transform-origin: center; /* Define o ponto de origem da transformação */
     }
+}
